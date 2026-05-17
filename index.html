@@ -48,10 +48,10 @@
     padding:14px 24px;max-width:1180px;margin:0 auto;
   }
   .logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
-  .site-logo{height:64px;width:auto;display:block;object-fit:contain;}
+  .site-logo{height:95px;width:auto;display:block;object-fit:contain;}
   .footer-logo-box{background:#fff;border-radius:10px;padding:6px 10px;display:inline-flex;align-items:center;}
-  .footer-logo-box .site-logo{height:58px;}
-  .logo svg{height:70px;width:auto;}
+  .footer-logo-box .site-logo{height:72px;}
+  .logo svg{height:95px;width:auto;}
   .nav-links{display:flex;align-items:center;gap:6px;}
   .nav-link{
     font-weight:500;font-size:15px;color:var(--ink);
@@ -252,7 +252,7 @@
   footer{background:var(--navy-deep);color:#aeb6cc;padding:46px 24px 30px;}
   .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;
     gap:30px;flex-wrap:wrap;align-items:center;}
-  footer .logo svg{height:52px;}
+  footer .logo svg{height:72px;}
   .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
   .footer-links span{cursor:pointer;font-size:14.5px;transition:color .15s;}
   .footer-links span:hover{color:#fff;}
@@ -265,7 +265,7 @@
 
   @media(max-width:880px){
     .nav-links{
-      position:fixed;top:85px;left:0;right:0;background:#fff;flex-direction:column;
+      position:fixed;top:115px;left:0;right:0;background:#fff;flex-direction:column;
       align-items:stretch;gap:0;padding:10px 16px 20px;border-bottom:1px solid var(--line);
       box-shadow:var(--shadow);display:none;
     }
@@ -582,7 +582,7 @@
         <div class="intake-prompt">
           <h2>Ready for a calmer business backend?</h2>
           <p>Answer a few short questions so I can understand your business, what is taking up your time, and where support would make the biggest difference.</p>
-          <span class="btn btn-gold" onclick="showPage('questionnaire')">Share What You Need Help With</span>
+          <span class="btn btn-gold" onclick="showPage('questionnaire')">Tell Me What You Need</span>
         </div>
       </div>
     </div>
@@ -699,7 +699,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary" style="width:100%;">Send enquiry</button>
-          <p class="form-note" id="form-status">When you click send, your email app will open with your answers ready to send to me..</p>
+          <p class="form-note" id="form-status">Your enquiry comes straight to me &mdash; I'll reply by email or WhatsApp. You can also reach me directly on the contact page.</p>
         </form>
       </div>
     </div>
@@ -744,16 +744,17 @@ function toggleMenu(){
   var m=document.getElementById('navMenu');
   if(m){m.classList.toggle('open');}
 }
-ffunction sendEnquiry(e){
+function sendEnquiry(e){
   e.preventDefault();
 
   var f = e.target;
+  var status = f.querySelector('#form-status') || document.getElementById('form-status');
   var formData = new FormData(f);
   var lines = [];
 
   formData.forEach(function(value, key){
-    if (key !== 'form-name' && key !== 'bot-field' && value.trim() !== '') {
-      var label = key.replace(/_/g, ' ');
+    if(key !== 'form-name' && key !== 'bot-field' && String(value).trim() !== ''){
+      var label = key.replace(/_/g, ' ').replace(/\b\w/g, function(c){ return c.toUpperCase(); });
       lines.push(label + ': ' + value);
       lines.push('');
     }
@@ -761,8 +762,12 @@ ffunction sendEnquiry(e){
 
   var subject = encodeURIComponent('New enquiry from Personal Virtual Support website');
   var body = encodeURIComponent(lines.join('\n'));
-
   window.location.href = 'mailto:contact@personalvirtualsupport.com?subject=' + subject + '&body=' + body;
+
+  if(status){
+    status.textContent = 'Your email app should now open with your answers ready to send.';
+    status.style.color = '#1A8B86';
+  }
 }
 document.addEventListener('DOMContentLoaded',function(){
   var mb=document.getElementById('menuBtn');
