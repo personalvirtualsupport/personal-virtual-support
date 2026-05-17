@@ -51,7 +51,7 @@
   .site-logo{height:64px;width:auto;display:block;object-fit:contain;}
   .footer-logo-box{background:#fff;border-radius:10px;padding:6px 10px;display:inline-flex;align-items:center;}
   .footer-logo-box .site-logo{height:58px;}
-  .logo svg{height:56px;width:auto;}
+  .logo svg{height:70px;width:auto;}
   .nav-links{display:flex;align-items:center;gap:6px;}
   .nav-link{
     font-weight:500;font-size:15px;color:var(--ink);
@@ -699,7 +699,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary" style="width:100%;">Send enquiry</button>
-          <p class="form-note" id="form-status">Your enquiry comes straight to me &mdash; I'll reply by email or WhatsApp. You can also reach me directly on the contact page.</p>
+          <p class="form-note" id="form-status">When you click send, your email app will open with your answers ready to send to me..</p>
         </form>
       </div>
     </div>
@@ -744,22 +744,25 @@ function toggleMenu(){
   var m=document.getElementById('navMenu');
   if(m){m.classList.toggle('open');}
 }
-function sendEnquiry(e){
+ffunction sendEnquiry(e){
   e.preventDefault();
-  var f=e.target;
-  var status=document.getElementById('form-status');
-  var btn=f.querySelector('button[type=submit]');
-  if(btn){btn.disabled=true;btn.textContent='Sending...';}
-  var data=new URLSearchParams(new FormData(f)).toString();
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(function(r){
-    if(!r.ok){throw new Error('bad');}
-    f.reset();
-    if(status){status.textContent='Thank you - your enquiry has been sent. I will be in touch with you soon.';status.style.color='#1A8B86';}
-    if(btn){btn.textContent='Sent';}
-  }).catch(function(){
-    if(status){status.textContent='Sorry, something went wrong sending that. Please email contact@personalvirtualsupport.com directly.';status.style.color='#c0392b';}
-    if(btn){btn.disabled=false;btn.textContent='Send enquiry';}
+
+  var f = e.target;
+  var formData = new FormData(f);
+  var lines = [];
+
+  formData.forEach(function(value, key){
+    if (key !== 'form-name' && key !== 'bot-field' && value.trim() !== '') {
+      var label = key.replace(/_/g, ' ');
+      lines.push(label + ': ' + value);
+      lines.push('');
+    }
   });
+
+  var subject = encodeURIComponent('New enquiry from Personal Virtual Support website');
+  var body = encodeURIComponent(lines.join('\n'));
+
+  window.location.href = 'mailto:contact@personalvirtualsupport.com?subject=' + subject + '&body=' + body;
 }
 document.addEventListener('DOMContentLoaded',function(){
   var mb=document.getElementById('menuBtn');
