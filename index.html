@@ -107,6 +107,44 @@
   }
 
 
+  .bio-box{
+    max-width:880px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:34px 32px;
+    box-shadow:var(--shadow);
+  }
+  .bio-box h2{font-size:28px;margin-bottom:14px;}
+  .bio-box p{color:var(--muted);font-size:16.5px;margin-bottom:14px;}
+  .bio-points{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:24px;
+  }
+  .bio-point{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 16px;
+  }
+  .bio-point strong{
+    display:block;
+    color:var(--navy);
+    font-family:'Poppins',sans-serif;
+    font-size:15.5px;
+    margin-bottom:6px;
+  }
+  .bio-point span{
+    display:block;
+    color:var(--muted);
+    font-size:14.5px;
+    line-height:1.55;
+  }
+
+
   .page{display:none;animation:fade .4s ease;}
   .page.active{display:block;}
   @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
@@ -275,7 +313,7 @@
     .hero p.tagline{font-size:18px;}
     .hero{padding:80px 24px 90px;}
     .split{grid-template-columns:1fr;gap:34px;}
-    .grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}
+    .grid-3,.grid-4,.bio-points{grid-template-columns:repeat(2,1fr);}
     .pricing{grid-template-columns:1fr;}
     .price-card.featured{transform:scale(1);}
     .price-card.featured:hover{transform:translateY(-4px);}
@@ -285,7 +323,7 @@
     .cta-strip{padding:40px 24px;}
   }
   @media(max-width:520px){
-    .grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}
+    .grid-3,.grid-4,.grid-2,.bio-points{grid-template-columns:1fr;}
     .hero h1{font-size:32px;}
     .footer-inner{flex-direction:column;align-items:flex-start;}
   }
@@ -429,6 +467,31 @@
   <section class="block">
     <div class="container">
       <p class="lead narrow center">Personal Virtual Support is a one-person virtual support service for busy business owners who are carrying too much themselves. I work behind the scenes to keep the admin side of your business calm, organised, and moving &mdash; so the details don't fall through the cracks and you can stay focused on growth, your clients, and the work only you can do.</p>
+    </div>
+  </section>
+
+  <section class="block soft" style="padding-top:0;">
+    <div class="container">
+      <div class="bio-box">
+        <h2>Who is behind Personal Virtual Support?</h2>
+        <p>Personal Virtual Support is run by Soroh Dina, an experienced remote business support professional with many years of hands-on experience helping businesses stay organised, responsive, and on top of the details.</p>
+        <p>My background includes admin and operations support, content and documentation work, file and document organisation, spreadsheet trackers, client communication, follow-up, research, scheduling, and project coordination. I am especially comfortable taking messy information, scattered tasks, or unfinished systems and turning them into something clear, structured, and workable.</p>
+        <p>I am also very good at figuring things out independently. I am not afraid of new systems, unfamiliar tools, or complicated tasks, and I use AI as a practical guide to learn quickly, problem-solve, draft, summarise, organise, and get things moving faster.</p>
+        <div class="bio-points">
+          <div class="bio-point">
+            <strong>Experienced support</strong>
+            <span>Practical experience across admin, documents, files, communication, trackers, and day-to-day business support.</span>
+          </div>
+          <div class="bio-point">
+            <strong>Independent problem-solver</strong>
+            <span>Comfortable working things out, learning new tools, and bringing order to unclear or messy tasks.</span>
+          </div>
+          <div class="bio-point">
+            <strong>AI-assisted efficiency</strong>
+            <span>Uses AI carefully and practically to work faster while keeping human judgement, care, and accountability.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
