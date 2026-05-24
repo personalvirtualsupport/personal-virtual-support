@@ -285,6 +285,30 @@
   form textarea{resize:vertical;min-height:120px;}
   .form-note{font-size:13px;color:var(--muted);margin-top:10px;}
 
+
+
+  .faq-list{
+    max-width:880px;
+    margin:0 auto;
+    display:grid;
+    gap:16px;
+  }
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px 24px;
+    box-shadow:var(--shadow);
+  }
+  .faq-item h3{
+    font-size:18px;
+    margin-bottom:8px;
+  }
+  .faq-item p{
+    color:var(--muted);
+    font-size:15.5px;
+  }
+
   footer{background:var(--navy-deep);color:#aeb6cc;padding:46px 24px 30px;}
   .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;
     gap:30px;flex-wrap:wrap;align-items:center;}
@@ -354,6 +378,7 @@
       <span class="nav-link current" data-page="home" onclick="showPage('home')">Home</span>
       <span class="nav-link" data-page="about" onclick="showPage('about')">About</span>
       <span class="nav-link" data-page="services" onclick="showPage('services')">Services</span>
+      <span class="nav-link" data-page="faq" onclick="showPage('faq')">FAQ</span>
       <span class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</span>
     </nav>
   </div>
@@ -787,6 +812,60 @@
   </section>
 </div>
 
+
+<div class="page" id="faq">
+  <section class="hero" style="padding:90px 24px 80px;">
+    <div class="hero-inner">
+      <span class="eyebrow">FAQ</span>
+      <h1>Questions you may be asking</h1>
+      <p class="tagline">A few simple answers about how Personal Virtual Support works and what kind of help I offer.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What kind of tasks can you help with?</h3>
+          <p>I help with behind-the-scenes business support such as email follow-up, scheduling, admin tasks, trackers and spreadsheets, file and document organisation, systems, client communication, and AI-assisted tasks.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who is Personal Virtual Support for?</h3>
+          <p>It is mainly for busy business owners, professionals, and small teams who need reliable support but do not necessarily want to hire someone full-time.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to know exactly what I need help with?</h3>
+          <p>No. Many people know they feel overwhelmed, but are not sure what to hand over first. We can start with a short conversation, look at what is taking up your time, and work out where support would make the biggest difference.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are you a tech person?</h3>
+          <p>I am not offering technical development or coding services. However, I am very comfortable figuring out platforms, systems, tools, and practical admin processes, and I am not afraid of unfamiliar or messy tasks.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can you help with AI?</h3>
+          <p>Yes. I use AI as a practical tool to work more efficiently, organise information, draft content, clean up documents, create systems, and find sensible solutions to admin and business support tasks.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you work hourly or as a package?</h3>
+          <p>It depends on what kind of support you need. We can discuss the scope together and choose the best way to work, whether that is a clear project, regular support, or a more flexible arrangement.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do we get started?</h3>
+          <p>The first step is a short, no-pressure chat. You can tell me what is taking up your time, what feels messy or stuck, and what kind of support would feel most helpful. From there, we can decide whether it makes sense to work together.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What makes this different from using a larger agency?</h3>
+          <p>Personal Virtual Support is a dedicated, one-person service. You work directly with me, so the support is personal, consistent, and focused on understanding your business properly.</p>
+        </div>
+      </div>
+
+      <div class="center mt-40">
+        <span class="btn btn-primary" onclick="showPage('contact')">Ask a question</span>
+      </div>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <footer>
@@ -798,6 +877,7 @@
       <span onclick="showPage('home')">Home</span>
       <span onclick="showPage('about')">About</span>
       <span onclick="showPage('services')">Services</span>
+      <span onclick="showPage('faq')">FAQ</span>
       <span onclick="showPage('contact')">Contact</span>
     </div>
   </div>
