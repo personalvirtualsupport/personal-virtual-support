@@ -351,10 +351,42 @@
     .hero h1{font-size:32px;}
     .footer-inner{flex-direction:column;align-items:flex-start;}
   }
+
+  .payment-card{
+    max-width:760px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:38px 32px;
+    box-shadow:var(--shadow-lg);
+    text-align:center;
+  }
+  .payment-card h2{
+    font-size:30px;
+    margin-bottom:12px;
+  }
+  .payment-card p{
+    color:var(--muted);
+    font-size:16.5px;
+    margin-bottom:20px;
+  }
+  .payment-card .small-note{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:14px;
+    margin-bottom:0;
+  }
+
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
+<!-- STRIPE SETUP:
+Replace https://buy.stripe.com/YOUR-STRIPE-PAYMENT-LINK with your real Stripe Payment Link from your Stripe dashboard.
+Search for YOUR-STRIPE-PAYMENT-LINK to find every placeholder.
+-->
+
 <!-- CALENDLY LIVE LINK: https://calendly.com/contact-personalvirtualsupport -->
 
 <header>
@@ -382,6 +414,7 @@
       <span class="nav-link" data-page="services" onclick="showPage('services')">Services</span>
       <span class="nav-link" data-page="faq" onclick="showPage('faq')">FAQ</span>
       <span class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</span>
+      <span class="nav-link" data-page="payment" onclick="showPage('payment')">Payment</span>
       <a class="nav-cta" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a call</a>
     </nav>
   </div>
@@ -692,6 +725,16 @@
           </div>
         </div>
       </div>
+      <div class="contact-card stripe-contact-card">
+        <div class="ico">💳</div>
+        <div>
+          <div class="label">Payment</div>
+          <div class="value">
+            <a href="https://buy.stripe.com/YOUR-STRIPE-PAYMENT-LINK" target="_blank" rel="noopener">Pay securely with Stripe</a>
+          </div>
+        </div>
+      </div>
+
 
           <a class="contact-card" href="https://wa.me/972548481728" target="_blank" rel="noopener">
             <div class="ico">
@@ -893,6 +936,24 @@
 </div>
 
 </main>
+
+
+<div id="payment" class="page">
+
+  <section class="block" id="payment">
+    <div class="container">
+      <div class="payment-card">
+        <h2>Make a payment</h2>
+        <p>Use the secure payment link below to pay by card through Stripe.</p>
+        <a class="btn btn-primary" href="https://buy.stripe.com/YOUR-STRIPE-PAYMENT-LINK" target="_blank" rel="noopener">
+          Pay securely with Stripe
+        </a>
+        <p class="small-note">Please only use this link once we have agreed the service or invoice amount.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
   <div class="footer-inner">
