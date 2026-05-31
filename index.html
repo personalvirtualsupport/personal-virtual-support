@@ -352,8 +352,16 @@
     .footer-inner{flex-direction:column;align-items:flex-start;}
   }
 </style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
+
+<!--
+CALENDLY SETUP:
+Replace https://calendly.com/contact-personalvirtualsupport everywhere in this file with your real Calendly link,
+for example: https://calendly.com/sorohdina/free-discovery-call
+-->
+
 
 <header>
   <div class="nav">
@@ -616,7 +624,7 @@
           <div class="tier">Hourly Virtual Support</div>
           <div class="price">Hourly support</div>
           <p class="desc">Flexible hourly support for admin, operations, client support, inbox and document organisation, research, scheduling, trackers, systems, basic tech support, and project coordination. The same hourly approach applies whether the work is ongoing or project-based.</p>
-          <span class="btn btn-primary" onclick="showPage('contact')">Book a free call</span>
+          <a class="btn btn-primary" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free call</a>
         </div>
         <div class="price-card">
           <div class="tier">Use the Hours Your Way</div>
@@ -908,5 +916,7 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
