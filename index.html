@@ -351,16 +351,11 @@
     .hero h1{font-size:32px;}
     .footer-inner{flex-direction:column;align-items:flex-start;}
   }
-
-  .calendly-inline-btn{
-    margin-top:18px;
-  }
-
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
-<!-- LIVE CALENDLY LINK: https://calendly.com/contact-personalvirtualsupport -->
+<!-- CALENDLY LIVE LINK: https://calendly.com/contact-personalvirtualsupport -->
 
 <header>
   <div class="nav">
@@ -387,6 +382,7 @@
       <span class="nav-link" data-page="services" onclick="showPage('services')">Services</span>
       <span class="nav-link" data-page="faq" onclick="showPage('faq')">FAQ</span>
       <span class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</span>
+      <a class="nav-cta" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a call</a>
     </nav>
   </div>
 </header>
@@ -400,8 +396,19 @@
       <h1>Your dedicated right hand</h1>
       <p class="tagline">The admin, organisation, and follow-up that keeps your business running &mdash; handled with care, so nothing slips through the cracks.</p>
       <div class="btn-row">
-        <span class="btn btn-primary" onclick="showPage('contact')">Get in touch</span>
+        <a class="btn btn-primary" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free call</a>
         <span class="btn btn-light" onclick="showPage('services')">See how it works</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block soft" id="book-call">
+    <div class="container">
+      <div class="cta-strip">
+        <h2>Book a free call</h2>
+        <p>Choose a time for a short call to talk through what kind of support would be most helpful for your business.</p>
+        <a class="btn btn-light" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Open my Calendly</a>
+        <p style="margin-top:16px;font-size:14px;color:#e4f4f3;">Direct link: <a href="https://calendly.com/contact-personalvirtualsupport" target="_blank" rel="noopener" style="text-decoration:underline;color:#fff;">https://calendly.com/contact-personalvirtualsupport</a></p>
       </div>
     </div>
   </section>
@@ -623,7 +630,7 @@
           <div class="tier">Hourly Virtual Support</div>
           <div class="price">Hourly support</div>
           <p class="desc">Flexible hourly support for admin, operations, client support, inbox and document organisation, research, scheduling, trackers, systems, basic tech support, and project coordination. The same hourly approach applies whether the work is ongoing or project-based.</p>
-          <a class="btn btn-primary" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free call</a>
+          <a class="btn btn-primary" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free call</a>
         </div>
         <div class="price-card">
           <div class="tier">Use the Hours Your Way</div>
@@ -674,6 +681,18 @@
               <div class="value">contact@personalvirtualsupport.com</div>
             </div>
           </div>
+      <div class="contact-card calendly-contact-card">
+        <div class="ico">📅</div>
+        <div>
+          <div class="label">Book a free call</div>
+          <div class="value">
+            <a href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;" target="_blank" rel="noopener">
+              Schedule a call on Calendly
+            </a>
+          </div>
+        </div>
+      </div>
+
           <a class="contact-card" href="https://wa.me/972548481728" target="_blank" rel="noopener">
             <div class="ico">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -709,7 +728,7 @@
     <div class="container">
       <div class="questionnaire-card">
         <h2 style="font-size:24px;margin-bottom:20px;">Support enquiry form</h2>
-        <form id="contact-form" name="contact" action="https://formspree.io/f/xqejzwgv" method="POST" accept-charset="UTF-8">
+<form id="contact-form" name="contact" action="https://formspree.io/f/xqejzwgv" method="POST" accept-charset="UTF-8">
           <input type="hidden" name="_subject" value="New enquiry from Personal Virtual Support website">
           <input type="hidden" name="_template" value="table">
 
@@ -808,6 +827,12 @@
           <button type="submit" class="btn btn-primary" style="width:100%;">Send enquiry</button>
           <p class="form-note" id="form-status">Your answers will be sent directly to me through the website.</p>
         </form>
+        <div class="mt-40 contact-calendly-button">
+          <a class="btn btn-primary" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;" target="_blank" rel="noopener">
+            Book a free call
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -869,19 +894,6 @@
 
 </main>
 
-
-<section class="block soft" id="book-call">
-  <div class="container center">
-    <div class="section-head">
-      <h2>Book a free call</h2>
-      <p>Ready to talk through what kind of support would be most helpful? Choose a time that works for you.</p>
-      <a class="btn btn-primary calendly-inline-btn" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">
-        Book a free call
-      </a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="footer-inner">
     <div class="logo" onclick="showPage('home')">
@@ -927,7 +939,6 @@ document.addEventListener('DOMContentLoaded',function(){
   if(y){y.textContent=new Date().getFullYear();}
 });
 </script>
-
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
