@@ -351,17 +351,16 @@
     .hero h1{font-size:32px;}
     .footer-inner{flex-direction:column;align-items:flex-start;}
   }
+
+  .calendly-inline-btn{
+    margin-top:18px;
+  }
+
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
-
-<!--
-CALENDLY SETUP:
-Replace https://calendly.com/contact-personalvirtualsupport everywhere in this file with your real Calendly link,
-for example: https://calendly.com/sorohdina/free-discovery-call
--->
-
+<!-- LIVE CALENDLY LINK: https://calendly.com/contact-personalvirtualsupport -->
 
 <header>
   <div class="nav">
@@ -869,6 +868,19 @@ for example: https://calendly.com/sorohdina/free-discovery-call
 </div>
 
 </main>
+
+
+<section class="block soft" id="book-call">
+  <div class="container center">
+    <div class="section-head">
+      <h2>Book a free call</h2>
+      <p>Ready to talk through what kind of support would be most helpful? Choose a time that works for you.</p>
+      <a class="btn btn-primary calendly-inline-btn" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">
+        Book a free call
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
