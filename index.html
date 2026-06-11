@@ -920,29 +920,60 @@
 </footer>
 
 <script>
-function showPage(id){
-  var p=document.querySelectorAll('.page');
-  for(var i=0;i<p.length;i++){p[i].classList.remove('active');}
-  var t=document.getElementById(id);
-  if(t){t.classList.add('active');}
+function setCurrentNav(id){
   var n=document.querySelectorAll('.nav-link');
   for(var j=0;j<n.length;j++){
     if(n[j].getAttribute('data-page')===id){n[j].classList.add('current');}
     else{n[j].classList.remove('current');}
   }
-  var m=document.getElementById('navMenu');
-  if(m){m.classList.remove('open');}
-  window.scrollTo(0,0);
 }
+
+function scrollToSection(id){
+  var target=document.getElementById(id);
+  if(!target){return;}
+
+  setCurrentNav(id);
+
+  var menu=document.getElementById('navMenu');
+  if(menu){menu.classList.remove('open');}
+
+  var header=document.querySelector('header');
+  var headerOffset=header ? header.offsetHeight + 12 : 0;
+  var targetPosition=target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+  window.scrollTo({top: targetPosition, behavior: 'smooth'});
+}
+
+/* Kept so older buttons/logo code still works */
+function showPage(id){
+  scrollToSection(id);
+}
+
 function toggleMenu(){
   var m=document.getElementById('navMenu');
   if(m){m.classList.toggle('open');}
 }
+
 document.addEventListener('DOMContentLoaded',function(){
   var mb=document.getElementById('menuBtn');
   if(mb){mb.addEventListener('click',toggleMenu);}
+
   var y=document.getElementById('year');
   if(y){y.textContent=new Date().getFullYear();}
+
+  var sections=['home','about','services','faq','contact'];
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        setCurrentNav(entry.target.id);
+      }
+    });
+  }, {rootMargin:'-35% 0px -55% 0px', threshold:0});
+
+  sections.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){observer.observe(el);}
+  });
 });
 </script>
 
