@@ -78,6 +78,7 @@ section.block.soft{background:var(--bg-soft);}
 .grid{display:grid;gap:22px;}
 .grid-2{grid-template-columns:repeat(2,1fr);}
 .grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 24px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s;}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
 .card h3{font-size:18px;margin-bottom:8px;}
@@ -141,6 +142,7 @@ footer{background:var(--navy-deep);color:#aeb6cc;padding:44px 24px 30px;}
   .hero h1{font-size:34px;}
   .hero p.tagline{font-size:18px;}
   .hero{padding:72px 24px 84px;}
+  .grid-4{grid-template-columns:repeat(2,1fr);}
   .grid-3,.grid-2{grid-template-columns:1fr;}
   .section-head h2{font-size:26px;}
   section.block{padding:56px 0;}
