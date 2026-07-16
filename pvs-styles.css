@@ -96,10 +96,10 @@ section.block.soft{background:var(--bg-soft);}
 .work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
 .work-shot{aspect-ratio:16/10;overflow:hidden;background:var(--bg-soft);}
 .work-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;}
-.work-meta{padding:22px 24px 26px;}
+.work-meta{padding:22px 24px 26px;flex:1 1 auto;display:flex;flex-direction:column;}
 .work-meta h3{margin:0 0 8px;color:var(--navy);}
 .work-meta p{margin:0 0 14px;color:var(--muted);line-height:1.55;font-size:15px;}
-.work-link{color:var(--teal);font-weight:600;}
+.work-link{color:var(--teal);font-weight:600;margin-top:auto;}
 
 /* Blog cards */
 .post-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s;height:100%;}
