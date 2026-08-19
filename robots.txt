@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://personalvirtualsupport.org/sitemap.xml
+Sitemap: https://personalvirtualsupport.com/sitemap.xml
