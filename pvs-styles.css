@@ -208,31 +208,91 @@ footer .footer-bottom a:hover{color:#fff;}
 @media(max-width:520px){ .wa-float{right:14px;bottom:14px;width:52px;height:52px;} }
 @media print{ .wa-float{display:none;} }
 
-/* ---- Signature strip (v10) ---- */
+/* ---- Signature strip (v12) ---- */
 .signature{
   max-width:680px;margin:0 auto;padding:8px 20px 0;
-  display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
   background:none;border:none;box-shadow:none;border-radius:0;
 }
-.signature .sig-mark{
-  flex:none;width:64px;height:64px;border-radius:50%;
-  background:linear-gradient(135deg,var(--navy),var(--teal));
-  color:#fff;display:flex;align-items:center;justify-content:center;
-  font-family:'Poppins',sans-serif;font-weight:600;font-size:18px;letter-spacing:.03em;
-  box-shadow:0 6px 18px rgba(26,139,134,.22);
-}
 .signature p{
-  margin:0;color:var(--ink);font-size:1.12rem;line-height:1.7;max-width:60ch;
+  margin:0;color:var(--ink);font-size:1.14rem;line-height:1.7;max-width:60ch;
 }
 .signature .sig-name{color:var(--teal);font-weight:700;text-decoration:none;}
 .signature .sig-name:hover{text-decoration:underline;}
 .signature::after{
   content:"";display:block;width:54px;height:3px;border-radius:2px;
   background:linear-gradient(90deg,var(--teal),rgba(26,139,134,0));
-  margin-top:2px;
 }
 @media(max-width:560px){
-  .signature{gap:14px;padding:4px 4px 0;}
-  .signature p{font-size:1.03rem;}
-  .signature .sig-mark{width:58px;height:58px;font-size:16px;}
+  .signature{gap:12px;padding:4px 4px 0;}
+  .signature p{font-size:1.04rem;}
+}
+
+/* ================= Design pass v11: warm ground, scroll reveal, softer type ================= */
+
+:root{
+  --bg:#FAF7F2;          /* warm off-white page */
+  --bg-soft:#F1EDE4;     /* warmer tinted band */
+  --surface:#ffffff;     /* cards stay white so they lift off the warm page */
+  --line:#E7E1D6;
+  --shadow:0 10px 30px rgba(20,32,74,.07);
+  --shadow-lg:0 18px 50px rgba(20,32,74,.12);
+}
+
+/* cards lift off the warm ground */
+.work-card,.testimonial,.card,.price-card{background:var(--surface);}
+.work-shot{background:var(--bg-soft);}
+
+/* a little more air and a slightly larger type scale */
+section.block{padding:96px 0;}
+.section-head h2{font-size:34px;letter-spacing:-.01em;}
+.lead{font-size:1.14rem;line-height:1.75;}
+.card p,.work-meta p{font-size:1rem;line-height:1.62;}
+
+/* mixed-weight hero line */
+.hero h1 .lift{font-weight:400;}
+.hero h1 em{font-style:italic;font-weight:600;}
+
+/* soft teal shape behind the portfolio screenshots */
+.work-card{position:relative;overflow:hidden;}
+.work-card::before{
+  content:"";position:absolute;z-index:0;
+  width:210px;height:210px;border-radius:50%;
+  right:-70px;top:-70px;
+  background:radial-gradient(circle at 30% 30%, rgba(26,139,134,.20), rgba(26,139,134,0) 70%);
+  pointer-events:none;
+}
+.work-card > *{position:relative;z-index:1;}
+
+/* ---- Scroll reveal (CSS only, no JavaScript) ----
+   Uses scroll-driven animations. Browsers without support simply show the
+   content normally, so nothing is ever hidden from a visitor or a crawler. */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes pvs-rise{
+      from{opacity:0;transform:translateY(26px);}
+      to{opacity:1;transform:none;}
+    }
+    .section-head,
+    .lead,
+    .card,
+    .work-card,
+    .testimonial,
+    .price-card,
+    .faq-item,
+    .cta-strip,
+    .signature,
+    .split > div{
+      animation:pvs-rise linear both;
+      animation-timeline:view();
+      animation-range:entry 0% entry 62%;
+    }
+  }
+}
+
+@media(max-width:880px){
+  section.block{padding:64px 0;}
+  .section-head h2{font-size:27px;}
+  .lead{font-size:1.06rem;}
+  .work-card::before{width:150px;height:150px;right:-55px;top:-55px;}
 }
