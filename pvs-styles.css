@@ -192,21 +192,65 @@ footer .footer-bottom a:hover{color:#fff;}
 }
 
 
-/* ---- WhatsApp floating button (v9) ---- */
+/* ---- WhatsApp widget (v13) ---- */
+.wa-widget{position:fixed;right:20px;bottom:20px;z-index:900;
+  display:flex;flex-direction:column;align-items:flex-end;gap:14px;}
+.wa-toggle{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+
 .wa-float{
-  position:fixed;right:20px;bottom:20px;z-index:900;
-  width:56px;height:56px;border-radius:50%;
+  width:56px;height:56px;border-radius:50%;flex:none;
   display:flex;align-items:center;justify-content:center;
-  background:#25D366;color:#fff;text-decoration:none;
+  background:#25D366;color:#fff;cursor:pointer;
   box-shadow:0 6px 18px rgba(0,0,0,.22);
   transition:transform .18s ease,box-shadow .18s ease;
 }
-.wa-float:hover,.wa-float:focus-visible{
-  transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.28);color:#fff;
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.28);}
+.wa-toggle:focus-visible + .wa-card + .wa-float{outline:3px solid #0b3d2c;outline-offset:3px;}
+
+.wa-card{
+  width:320px;max-width:calc(100vw - 40px);
+  background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 18px 50px rgba(20,32,74,.28);
+  transform:translateY(14px) scale(.97);opacity:0;visibility:hidden;
+  transition:opacity .2s ease,transform .2s ease,visibility .2s;
 }
-.wa-float:focus-visible{outline:3px solid #fff;outline-offset:3px;}
-@media(max-width:520px){ .wa-float{right:14px;bottom:14px;width:52px;height:52px;} }
-@media print{ .wa-float{display:none;} }
+.wa-toggle:checked + .wa-card{opacity:1;visibility:visible;transform:none;}
+
+.wa-card-head{
+  background:#25D366;color:#fff;padding:18px 18px 16px;
+  display:flex;gap:12px;align-items:flex-start;position:relative;
+}
+.wa-head-icon{flex:none;display:flex;}
+.wa-head-text{display:flex;flex-direction:column;gap:3px;padding-right:14px;}
+.wa-head-text strong{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;line-height:1.25;}
+.wa-head-text span{font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.94);}
+.wa-close{
+  position:absolute;top:8px;right:10px;cursor:pointer;
+  font-size:22px;line-height:1;color:rgba(255,255,255,.9);padding:4px 6px;border-radius:6px;
+}
+.wa-close:hover{background:rgba(255,255,255,.16);color:#fff;}
+
+.wa-card-body{padding:16px;background:#fff;}
+.wa-person{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:10px;
+  background:#F2F4F7;border-left:4px solid #25D366;
+  color:var(--ink);text-decoration:none;transition:background .15s ease;
+}
+.wa-person:hover{background:#E9EDF3;}
+.wa-person-av{
+  flex:none;width:42px;height:42px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+}
+.wa-person-name{flex:1;font-weight:600;font-size:15px;color:var(--navy);}
+.wa-person-go{flex:none;color:#25D366;display:flex;}
+
+@media(max-width:520px){
+  .wa-widget{right:14px;bottom:14px;}
+  .wa-float{width:52px;height:52px;}
+  .wa-card{width:min(300px,calc(100vw - 28px));}
+}
+@media print{.wa-widget{display:none;}}
 
 /* ---- Signature strip (v12) ---- */
 .signature{
@@ -270,7 +314,7 @@ section.block{padding:96px 0;}
 @supports (animation-timeline: view()){
   @media (prefers-reduced-motion: no-preference){
     @keyframes pvs-rise{
-      from{opacity:0;transform:translateY(26px);}
+      from{opacity:0;transform:translateY(84px);}
       to{opacity:1;transform:none;}
     }
     .section-head,
@@ -285,7 +329,7 @@ section.block{padding:96px 0;}
     .split > div{
       animation:pvs-rise linear both;
       animation-timeline:view();
-      animation-range:entry 0% entry 62%;
+      animation-range:entry 0% cover 42%;
     }
   }
 }
