@@ -547,6 +547,7 @@ section.block{padding:96px 0;}
     .card,
     .work-card,
     .testimonial,
+    .t-card,
     .price-card,
     .faq-item,
     .cta-strip,
@@ -571,3 +572,49 @@ section.block{padding:96px 0;}
 .grid.work-grid .work-card{flex:0 1 calc(25% - 16.5px);}
 @media(max-width:880px){.grid.work-grid .work-card{flex-basis:calc(50% - 11px);}}
 @media(max-width:520px){.grid.work-grid .work-card{flex-basis:100%;}}
+
+/* ================= v15: testimonial cards + read-full-review dialog ================= */
+.t-grid{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;align-items:stretch;}
+.t-card{
+  flex:0 1 calc(33.333% - 15px);
+  display:flex;flex-direction:column;
+  background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);
+  border-radius:14px;padding:28px 26px;box-shadow:var(--shadow);margin:0;
+}
+.t-card blockquote{margin:0;flex:1 1 auto;}
+.t-card blockquote p{color:var(--ink);font-size:1.02rem;line-height:1.7;margin:0;}
+.t-card figcaption{margin-top:20px;display:flex;flex-direction:column;}
+.t-open{
+  margin-top:16px;align-self:flex-start;cursor:pointer;
+  color:var(--teal);font-weight:600;font-size:.95rem;
+  border-bottom:1px solid transparent;
+}
+.t-open:hover{border-bottom-color:var(--teal);}
+.t-toggle{position:absolute;opacity:0;width:0;height:0;}
+#tm-1:focus-visible ~ .container .t-open[for="tm-1"],
+#tm-2:focus-visible ~ .container .t-open[for="tm-2"],
+#tm-3:focus-visible ~ .container .t-open[for="tm-3"]{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px;}
+
+.t-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;}
+#tm-1:checked ~ .t-m1,#tm-2:checked ~ .t-m2,#tm-3:checked ~ .t-m3{display:flex;}
+.t-backdrop{position:absolute;inset:0;background:rgba(20,32,74,.55);cursor:pointer;}
+.t-dialog{
+  position:relative;width:min(660px,100%);max-height:84vh;overflow-y:auto;
+  background:var(--surface);border-radius:16px;padding:40px 40px 34px;
+  box-shadow:var(--shadow-lg);text-align:left;
+}
+.t-quote{margin:0;}
+.t-dialog blockquote{margin:0;}
+.t-dialog blockquote p{color:var(--ink);font-size:1.05rem;line-height:1.7;margin:0 0 16px;}
+.t-dialog figcaption{margin-top:18px;display:flex;flex-direction:column;}
+.t-close{
+  position:absolute;top:10px;right:16px;cursor:pointer;
+  font-size:30px;line-height:1;color:var(--muted);
+}
+.t-close:hover{color:var(--navy);}
+
+@media(max-width:880px){.t-card{flex-basis:calc(50% - 11px);}}
+@media(max-width:620px){
+  .t-card{flex-basis:100%;padding:26px 22px;}
+  .t-dialog{padding:34px 22px 26px;}
+}
