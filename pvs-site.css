@@ -569,7 +569,7 @@ section.block{padding:96px 0;}
 
 /* Work grid: flex so a trailing card centres instead of sitting alone on the left */
 .grid.work-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;}
-.grid.work-grid .work-card{flex:0 1 calc(25% - 16.5px);}
+.grid.work-grid .work-card{flex:0 1 calc(33.333% - 14.7px);}
 @media(max-width:880px){.grid.work-grid .work-card{flex-basis:calc(50% - 11px);}}
 @media(max-width:520px){.grid.work-grid .work-card{flex-basis:100%;}}
 
