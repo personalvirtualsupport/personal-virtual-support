@@ -31,8 +31,7 @@
 
   header{
     position:sticky;top:0;z-index:100;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(8px);
+    background:#ffffff;
     border-bottom:1px solid var(--line);
   }
   .nav{
@@ -618,3 +617,12 @@ section.block{padding:96px 0;}
   .t-card{flex-basis:100%;padding:26px 22px;}
   .t-dialog{padding:34px 22px 26px;}
 }
+
+/* Skip link: visible only when focused by keyboard */
+.skip-link{
+  position:absolute;left:12px;top:-60px;z-index:200;
+  background:var(--navy);color:#fff;font-weight:600;font-size:15px;
+  padding:11px 18px;border-radius:0 0 8px 8px;
+  transition:top .15s ease;
+}
+.skip-link:focus{top:0;outline:3px solid var(--teal);outline-offset:2px;}

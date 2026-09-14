@@ -26,7 +26,7 @@ img{max-width:100%;display:block;}
 .container{max-width:1080px;margin:0 auto;padding:0 24px;}
 
 /* Header / nav */
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:100%;margin:0;min-height:133px;}
 .logo{display:flex;align-items:center;gap:10px;}
 .logo .mark{width:44px;height:44px;border-radius:11px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;}
@@ -340,3 +340,12 @@ section.block{padding:96px 0;}
   .lead{font-size:1.06rem;}
   .work-card::before{width:150px;height:150px;right:-55px;top:-55px;}
 }
+
+/* Skip link: visible only when focused by keyboard */
+.skip-link{
+  position:absolute;left:12px;top:-60px;z-index:200;
+  background:var(--navy);color:#fff;font-weight:600;font-size:15px;
+  padding:11px 18px;border-radius:0 0 8px 8px;
+  transition:top .15s ease;
+}
+.skip-link:focus{top:0;outline:3px solid var(--teal);outline-offset:2px;}
