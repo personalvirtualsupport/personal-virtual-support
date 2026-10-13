@@ -632,3 +632,80 @@ section.block{padding:96px 0;}
   transition:top .15s ease;
 }
 .skip-link:focus{top:0;outline:3px solid var(--teal);outline-offset:2px;}
+
+/* ================= v20: readability + Oct 2026 content update ================= */
+/* Two families only: Inter (body, buttons, forms) and Poppins (headings). Weights loaded: Inter 400/500/600, Poppins 600/700. */
+body{font-size:17px;line-height:1.6;}
+p,li{max-width:72ch;}
+.center p,.section-head p,.cta-strip p{margin-left:auto;margin-right:auto;}
+.card p,.work-meta p{font-size:16px;line-height:1.6;}
+.feature p{font-size:16.5px;line-height:1.6;}
+.section-head p{font-size:18px;}
+.split p{font-size:17px;}
+.panel li{font-size:16.5px;}
+.contact-card .label{font-size:14px;}
+form label{font-size:15px;}
+form input,form textarea,form select{font-size:16px;}
+.form-note{font-size:14px;}
+.badge,.signature .sig-name{font-weight:600;}
+.prose{max-width:760px;margin:0 auto;}
+
+/* Buttons: one consistent style everywhere, wrap neatly */
+.btn{line-height:1.3;text-align:center;}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn:focus-visible,.nav-link:focus-visible,.nav-cta:focus-visible,a:focus-visible,button:focus-visible,.t-open:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px;}
+.hero .btn:focus-visible,.cta-strip .btn:focus-visible{outline-color:#9fe3df;}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.75);}
+.btn-outline-light:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+.cta-strip .btn-row{margin-top:4px;}
+.cta-strip .cta-small{margin:20px auto 0;font-size:15px;color:#e4f4f3;}
+.cta-strip .cta-small a{color:#fff;text-decoration:underline;}
+
+/* Homepage hero: prominent but not overwhelming */
+.hero-home h1{font-size:48px;line-height:1.18;}
+.hero-home h1 em{display:block;color:#9fe3df;}
+.hero-home p.tagline{max-width:640px;}
+
+/* Systems cards */
+.system-grid{max-width:920px;margin:0 auto;}
+.system-card{border-top:4px solid var(--teal);}
+.system-tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-deep);background:rgba(26,139,134,.1);padding:5px 10px;border-radius:6px;margin-bottom:14px;}
+.system-card h3{font-size:20px;}
+
+/* Website design scope note */
+.scope-note{max-width:760px;margin:30px auto 0;padding:18px 22px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;color:var(--ink);font-size:16.5px;}
+
+/* Contact quick form */
+.quick-form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:36px 34px;box-shadow:var(--shadow-lg);}
+.quick-form h2{font-size:26px;margin-bottom:8px;}
+.quick-form > p{color:var(--muted);margin-bottom:22px;}
+.quick-form .btn{width:100%;}
+.quick-form .form-more{margin:20px 0 0;font-size:15.5px;color:var(--muted);}
+.quick-form .form-more a,.form-status a{color:var(--teal-deep);text-decoration:underline;font-weight:600;}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.form-status{margin-top:16px;padding:14px 16px;border-radius:10px;font-size:16px;line-height:1.5;}
+.form-status.is-success{background:#e6f5f4;border:1px solid #9fd8d4;color:#0f4f4c;}
+.form-status.is-error{background:#fdf0ee;border:1px solid #efb8ad;color:#8a2a17;}
+form input[aria-invalid="true"],form textarea[aria-invalid="true"]{border-color:#c0492f;}
+
+@media(max-width:880px){
+  .contact-grid > .quick-form{order:-1;}
+  .hero-home h1{font-size:36px;}
+}
+@media(max-width:520px){
+  .hero-home{padding:56px 20px 64px;}
+  .hero-home h1{font-size:30px;}
+  .hero p.tagline{font-size:17px;margin:18px auto 28px;}
+  .hero .btn-row .btn{width:100%;}
+  .cta-strip .btn-row .btn{width:100%;}
+  .quick-form{padding:28px 20px;}
+  .section-head h2{font-size:25px;}
+}
+.hero-home .hero-inner{max-width:900px;}
+.hero-home h1{font-size:46px;}
+@media(max-width:880px){.hero-home h1{font-size:36px;}}
+@media(max-width:520px){.hero-home h1{font-size:30px;}}
+.grid.work-grid.work-grid-2{max-width:900px;margin:0 auto;}
+.grid.work-grid.work-grid-2 .work-card{flex-basis:calc(50% - 11px);}
+@media(max-width:520px){.grid.work-grid.work-grid-2 .work-card{flex-basis:100%;}}
+.hero .lead{color:#d6dcec;margin:22px auto 0;max-width:640px;}
