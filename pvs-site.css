@@ -891,6 +891,9 @@ form input[aria-invalid="true"],form textarea[aria-invalid="true"]{border-color:
 .tools-list{display:flex;gap:12px;padding-right:12px;list-style:none;margin:0;}
 .tools-list li{display:inline-flex;align-items:center;gap:10px;max-width:none;white-space:nowrap;font-size:16px;font-weight:600;color:var(--navy);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 20px;box-shadow:0 3px 10px rgba(20,32,74,.05);}
 .tools-list img{width:22px;height:22px;flex:none;display:block;}
+.tools-custom{max-width:620px;margin:22px auto 0;padding:0 16px;font-size:16px;line-height:1.6;color:var(--navy);}
+.tools-custom a{color:var(--teal-deep);font-weight:600;white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}
+.tools-custom a:hover{text-decoration-thickness:2px;}
 @keyframes tools-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @media (prefers-reduced-motion: reduce){
   .tools-track{animation:none;width:auto;justify-content:center;}
