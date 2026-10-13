@@ -1,5 +1,5 @@
 /* Personal Virtual Support — shared styles for standalone pages
-   Matches the homepage design (navy/teal, Inter + Poppins). */
+   Matches the homepage design (navy/teal, DM Sans). */
 
 :root{
   --navy:#1B2A5E;
@@ -17,10 +17,10 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;
 }
-h1,h2,h3,h4{font-family:'Poppins',sans-serif;color:var(--navy);line-height:1.25;font-weight:600;}
+h1,h2,h3,h4{font-family:'DM Sans',sans-serif;color:var(--navy);line-height:1.25;font-weight:700;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 .container{max-width:1080px;margin:0 auto;padding:0 24px;}
@@ -29,9 +29,9 @@ img{max-width:100%;display:block;}
 header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:100%;margin:0;min-height:133px;}
 .logo{display:flex;align-items:center;gap:10px;}
-.logo .mark{width:44px;height:44px;border-radius:11px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;}
-.logo .word{font-family:'Poppins',sans-serif;font-weight:600;color:var(--navy);font-size:17px;line-height:1.1;}
-.logo .word small{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:11.5px;color:var(--muted);letter-spacing:.5px;}
+.logo .mark{width:44px;height:44px;border-radius:11px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;}
+.logo .word{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--navy);font-size:17px;line-height:1.1;}
+.logo .word small{display:block;font-family:'DM Sans',sans-serif;font-weight:400;font-size:11.5px;color:var(--muted);letter-spacing:.5px;}
 .nav-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
 .nav-link{font-weight:500;font-size:15px;color:var(--ink);padding:9px 14px;border-radius:8px;transition:background .15s,color .15s;}
 .nav-link:hover{background:var(--bg-soft);color:var(--navy);}
@@ -40,7 +40,7 @@ header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px so
 .nav-cta:hover{background:var(--teal-deep);transform:translateY(-1px);}
 
 /* Buttons */
-.btn{display:inline-block;font-family:'Inter',sans-serif;font-weight:600;font-size:16px;padding:14px 30px;border-radius:10px;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s,background .15s;}
+.btn{display:inline-block;font-family:'DM Sans',sans-serif;font-weight:600;font-size:16px;padding:14px 30px;border-radius:10px;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s,background .15s;}
 .btn-primary{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(26,139,134,.28);}
 .btn-primary:hover{background:var(--teal-deep);transform:translateY(-2px);}
 .btn-light{background:#fff;color:var(--navy);}
@@ -115,7 +115,7 @@ section.block.soft{background:var(--bg-soft);}
 .testimonial blockquote{margin:0;}
 .testimonial blockquote p{color:var(--ink);font-size:1.05rem;line-height:1.7;margin:0 0 16px;}
 .testimonial figcaption{margin-top:18px;display:flex;flex-direction:column;}
-.testimonial-name{font-weight:700;color:var(--navy);font-family:Poppins,sans-serif;}
+.testimonial-name{font-weight:700;color:var(--navy);font-family:'DM Sans',sans-serif;}
 .testimonial-role{color:var(--muted);font-size:.92rem;}
 
 /* CTA strip */
@@ -166,7 +166,7 @@ footer .footer-blurb{
 }
 footer .footer-col{display:flex;flex-direction:column;gap:10px;}
 footer .footer-col h2{
-  margin:0 0 4px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;
+  margin:0 0 4px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;
   letter-spacing:.09em;text-transform:uppercase;color:#3FD0C9;
 }
 footer .footer-col a,footer .footer-col a:visited{
@@ -222,7 +222,7 @@ footer .footer-bottom a:hover{color:#fff;}
 }
 .wa-head-icon{flex:none;display:flex;}
 .wa-head-text{display:flex;flex-direction:column;gap:3px;padding-right:14px;}
-.wa-head-text strong{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;line-height:1.25;}
+.wa-head-text strong{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;line-height:1.25;}
 .wa-head-text span{font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.94);}
 .wa-close{
   position:absolute;top:8px;right:10px;cursor:pointer;
@@ -295,7 +295,7 @@ section.block{padding:96px 0;}
 
 /* mixed-weight hero line */
 .hero h1 .lift{font-weight:400;}
-.hero h1 em{font-style:italic;font-weight:600;}
+.hero h1 em{font-style:italic;font-weight:700;}
 
 /* soft teal shape behind the portfolio screenshots */
 .work-card{position:relative;overflow:hidden;}
@@ -349,3 +349,26 @@ section.block{padding:96px 0;}
   transition:top .15s ease;
 }
 .skip-link:focus{top:0;outline:3px solid var(--teal);outline-offset:2px;}
+
+/* ================= Oct 2026: DM Sans type system =================
+   One family: DM Sans. Headings 700, paragraphs 400 at 18px, buttons and menu 500-600. */
+body{font-size:18px;font-weight:400;}
+p,.lead,.card p,.work-meta p,.feature p,.split p,.section-head p,.cta-strip p,.prose p,.post-card p,.inbox-strip p,.tools-custom,.price-card .desc,.testimonial blockquote p{font-size:18px;font-weight:400;}
+h1,h2,h3,h4,.section-head h2,.hero h1,.hero h1 em,.price-card .tier{font-weight:700;}
+.nav-link{font-weight:500;}
+.nav-cta,.btn{font-weight:600;}
+.faq-item p,.bio-box p,.scope-note{font-size:18px;}
+.post-meta,.prose p.post-meta{font-size:14px;}
+@media(max-width:700px){.hero p.tagline{font-size:18px;}}
+
+/* Mobile menu (matches main site) */
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px;}
+@media(max-width:880px){
+  .nav{position:relative;}
+  .menu-btn{display:block;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:10px 16px 20px;border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(20,32,74,.08);display:none;}
+  .nav-links.open{display:flex;}
+  .nav-link{padding:13px 14px;border-radius:8px;}
+  .nav-cta{margin:8px 14px 0;text-align:center;}
+}
