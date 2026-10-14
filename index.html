@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/pvs-site.css?v=28">
+<link rel="stylesheet" href="/pvs-site.css?v=29">
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://personalvirtualsupport.com/#business","name":"Personal Virtual Support","alternateName":"PVS","url":"https://personalvirtualsupport.com/","logo":{"@type":"ImageObject","url":"https://personalvirtualsupport.com/logo.png","width":1200,"height":572},"image":"https://personalvirtualsupport.com/social-card.png","description":"Personal Virtual Support (PVS) by Soroh Dina Lowe provides virtual assistant and practical tech support for busy business owners: admin and organisation, email and client follow-up, troubleshooting online tools and systems, website design and website updates, email marketing and automations, and systems, forms and spreadsheets.","email":"contact@personalvirtualsupport.com","telephone":"+972-54-848-1728","priceRange":"$$","address":{"@type":"PostalAddress","addressCountry":"IL"},"areaServed":[{"@type":"Country","name":"Israel"},{"@type":"Country","name":"United States"},{"@type":"Country","name":"United Kingdom"},{"@type":"GeoShape","name":"Worldwide (remote)"}],"knowsLanguage":["en","he"],"founder":{"@type":"Person","@id":"https://personalvirtualsupport.com/about/#soroh","name":"Soroh Dina Lowe","jobTitle":"Virtual Assistant & Website Designer"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Admin and organisation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Email and client follow-up"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tech support and troubleshooting"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website design, build and updates"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Email marketing and automations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Systems, forms and spreadsheets"}}]}</script>
 <script type="application/ld+json">
@@ -67,7 +67,6 @@
           <a class="btn btn-primary" href="/contact/#enquiry-form">Tell me what you need help with</a>
           <a class="btn btn-light" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free introductory call</a>
         </div>
-        <p class="hero-paths">Looking for help with&hellip; <a href="#hand-over" data-need="tech">Tech &amp; websites</a> <a href="#hand-over" data-need="admin">Admin &amp; inbox</a></p>
       </div>
       <div class="hero-visual" role="img" aria-label="Animation: a cluttered screen of overdue tasks being quickly tidied up and marked as done">
         <div class="ms-screen" aria-hidden="true">
@@ -87,29 +86,28 @@
       </div>
     </div>
   </section>
+  <section class="split-help">
+    <div class="container">
+      <h2>What do you need help with?</h2>
+      <div class="sh-grid">
+        <div class="sh-card">
+          <h3>Tech &amp; websites</h3>
+          <ul><li>New websites and updates</li><li>Email marketing and signup forms</li><li>Automations and systems</li><li>Anything that&rsquo;s stopped working</li></ul>
+          <a class="btn btn-primary" href="#hand-over" data-need="tech">Get tech help</a>
+        </div>
+        <div class="sh-card">
+          <h3>Admin &amp; inbox</h3>
+          <ul><li>Inbox sorted and kept under control</li><li>Invoices sent and payments followed up</li><li>Scheduling and calendar</li><li>Chasing clients and suppliers</li></ul>
+          <a class="btn btn-primary" href="#hand-over" data-need="admin">Get admin help</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="block soft">
     <div class="container">
       <div class="section-head">
         <h2>How I can help</h2>
         <p>Remote virtual assistant support from Israel, for business owners in Israel, the UK and the US.</p>
-      </div>
-      <div class="grid grid-4">
-        <div class="card">
-          <h3>Admin &amp; client follow-up</h3>
-          <p>Inbox, paperwork, scheduling and chasing clients and suppliers, all kept under control.</p>
-        </div>
-        <div class="card">
-          <h3>Tech support &amp; troubleshooting</h3>
-          <p>Forms, logins, domains, Zoom and Google Workspace problems worked out and sorted.</p>
-        </div>
-        <div class="card">
-          <h3>Websites &amp; website updates</h3>
-          <p>New websites designed and built from scratch, and updates to the one you already have.</p>
-        </div>
-        <div class="card">
-          <h3>Email marketing, systems &amp; automations</h3>
-          <p>MailerLite and Mailchimp campaigns, forms, spreadsheets and automations that save you time.</p>
-        </div>
       </div>
       <div class="inbox-strip">
         <div class="ib" role="img" aria-label="Animation: unread emails being sorted into Clients, Invoices and Follow-up folders until the inbox is empty">
@@ -467,7 +465,7 @@ document.addEventListener('DOMContentLoaded',function(){
     b.click(); document.getElementById('hand-over').scrollIntoView({behavior:'smooth',block:'start'});
   }
   window.addEventListener('hashchange',fromHash); fromHash();
-  Array.prototype.forEach.call(document.querySelectorAll('.hero-paths a[data-need]'),function(a){
+  Array.prototype.forEach.call(document.querySelectorAll('.split-help a[data-need]'),function(a){
     a.addEventListener('click',function(){var b=document.querySelector('.pick-opt[data-need="'+a.getAttribute('data-need')+'"]'); if(b) b.click();});
   });
 })();
