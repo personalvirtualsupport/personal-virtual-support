@@ -104,6 +104,31 @@
       </div>
     </div>
   </section>
+  <section class="block hv-video" aria-labelledby="hv-h">
+    <style>
+      .hv-video{padding:64px 0}
+      .hv-video .section-head{margin-bottom:28px}
+      .hv-frame{max-width:960px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 18px 48px rgba(27,42,94,.16);background:#E4E8EF;aspect-ratio:16/9}
+      .hv-frame video{display:block;width:100%;height:100%;object-fit:cover}
+      .hv-cta{text-align:center;margin-top:28px}
+      @media (max-width:640px){.hv-video{padding:44px 0}.hv-frame{border-radius:12px}}
+    </style>
+    <div class="container">
+      <div class="section-head">
+        <h2 id="hv-h">It starts with a quick call</h2>
+        <p>Tell me what&rsquo;s on your plate, and we&rsquo;ll work out together what to take off it.</p>
+      </div>
+      <div class="hv-frame">
+        <video id="hv-vid" poster="/assets/video/how-it-starts-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Short animation: a busy business owner's computer fills with emails, invoices and notifications. She messages Personal Virtual Support, they agree to schedule a quick call, and the screen clears to calm."><source src="/assets/video/how-it-starts.mp4" type="video/mp4"><source src="/assets/video/how-it-starts.webm" type="video/webm"></video>
+      </div>
+      <div class="hv-cta">
+        <a class="btn btn-primary" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free introductory call</a>
+      </div>
+    </div>
+    <script>
+      (function(){var v=document.getElementById('hv-vid');if(v&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.setAttribute('controls','');}})();
+    </script>
+  </section>
   <section class="block soft">
     <div class="container">
       <div class="section-head">
@@ -217,8 +242,8 @@
     <h2 id="tools-h">Tools I work with</h2>
     <div class="tools-mask">
       <div class="tools-track">
-        <ul class="tools-list"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li></ul>
-        <ul class="tools-list" aria-hidden="true"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li></ul>
+        <ul class="tools-list"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="22" height="22">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="22" height="22">Claude Cowork</li></ul>
+        <ul class="tools-list" aria-hidden="true"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="22" height="22">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="22" height="22">Claude Cowork</li></ul>
       </div>
     </div>
     <p class="tools-custom"><strong>Don't see what you need?</strong> Tell me what you're trying to do. If it's new to me, I'll learn it. I love working out new tools and solutions, with a little help from AI. <a href="/contact/">Let's talk &rarr;</a></p>
