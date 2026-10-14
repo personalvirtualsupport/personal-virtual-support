@@ -67,7 +67,7 @@
           <a class="btn btn-primary" href="https://wa.me/972548481728?text=Hi%20Soroh%20Dina%2C%20I%E2%80%99d%20like%20help%20with%E2%80%A6" target="_blank" rel="noopener">Tell me what you need help with</a>
           <a class="btn btn-light" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free introductory call</a>
         </div>
-        <p class="hero-paths">Looking for help with&hellip; <a href="#need-tech">Tech &amp; websites</a> <a href="#need-admin">Admin &amp; inbox</a></p>
+        <p class="hero-paths">Looking for help with&hellip; <a href="#hand-over" data-need="tech">Tech &amp; websites</a> <a href="#hand-over" data-need="admin">Admin &amp; inbox</a></p>
       </div>
       <div class="hero-visual" role="img" aria-label="Animation: a cluttered screen of overdue tasks being quickly tidied up and marked as done">
         <div class="ms-screen" aria-hidden="true">
@@ -467,6 +467,9 @@ document.addEventListener('DOMContentLoaded',function(){
     b.click(); document.getElementById('hand-over').scrollIntoView({behavior:'smooth',block:'start'});
   }
   window.addEventListener('hashchange',fromHash); fromHash();
+  Array.prototype.forEach.call(document.querySelectorAll('.hero-paths a[data-need]'),function(a){
+    a.addEventListener('click',function(){var b=document.querySelector('.pick-opt[data-need="'+a.getAttribute('data-need')+'"]'); if(b) b.click();});
+  });
 })();
 </script>
 <div class="wa-widget">
