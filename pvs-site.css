@@ -977,3 +977,5 @@ h1,h2,h3,h4,.section-head h2,.hero h1,.hero h1 em,.price-card .tier{font-weight:
 .sh-card ul{margin:0 0 22px 18px;padding:0;color:var(--muted);font-size:17px;line-height:1.7;flex-grow:1;}
 .sh-card .btn{align-self:flex-start;}
 @media(max-width:700px){.sh-grid{grid-template-columns:1fr;}.split-help{padding:44px 16px;}}
+@media(min-width:881px) and (max-width:1020px){.nav-links .nav-link{padding-left:8px;padding-right:8px;font-size:14.5px;}.nav-links .nav-cta{padding-left:14px;padding-right:14px;}}
+@media(min-width:881px) and (max-width:940px){.nav-links .nav-link{padding-left:6px;padding-right:6px;font-size:14px;}.nav-links .nav-cta{padding-left:12px;padding-right:12px;}}
