@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/pvs-site.css?v=25">
+<link rel="stylesheet" href="/pvs-site.css?v=28">
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://personalvirtualsupport.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://personalvirtualsupport.com/contact/"}]}
@@ -179,6 +179,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <script>
 (function(){
   var f=document.getElementById('quick-enquiry'); if(!f) return;
+  var topics={'monthly':'the \u20AA800 monthly invoicing & email management package','invoice-maker':'an invoice maker from my Google Sheet (\u20AA500)','lead-magnet':'a lead magnet setup (\u20AA300)','system':'a system setup (from \u20AA2,000)'};
+  var m=(location.search.match(/[?&]about=([\w-]+)/)||[])[1];
+  if(m && topics[m]){
+    var ta=document.getElementById('q-message'); if(ta && !ta.value) ta.value='Hi Soroh Dina, I\u2019d like to ask about '+topics[m]+'.\n\n';
+    var h=document.createElement('input'); h.type='hidden'; h.name='package'; h.value=topics[m]; f.appendChild(h);
+  }
   var st=document.getElementById('q-status'), btn=document.getElementById('q-submit');
   function show(cls,html){st.className='form-status '+cls;st.innerHTML=html;st.hidden=false;st.focus();}
   f.addEventListener('submit',function(e){
