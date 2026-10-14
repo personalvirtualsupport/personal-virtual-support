@@ -848,7 +848,7 @@ form input[aria-invalid="true"],form textarea[aria-invalid="true"]{border-color:
 /* ================= v22: inbox-zero strip, tools marquee, scroll-drawn timeline ================= */
 
 /* Inbox zero */
-.inbox-strip{max-width:860px;margin:40px auto 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 26px;box-shadow:var(--shadow);}
+.inbox-strip{max-width:none;margin:24px 0 0;display:grid;grid-template-columns:minmax(0,520px) 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 26px;box-shadow:var(--shadow);}
 .inbox-strip h3{font-size:20px;margin-bottom:6px;}
 .inbox-strip p{color:var(--muted);font-size:16px;margin:0;}
 .ib{position:relative;aspect-ratio:2.1/1;font-family:'DM Sans',sans-serif;}
@@ -932,3 +932,22 @@ h1,h2,h3,h4,.section-head h2,.hero h1,.hero h1 em,.price-card .tier{font-weight:
 .faq-item p,.bio-box p,.scope-note{font-size:18px;}
 .post-meta,.prose p.post-meta{font-size:14px;}
 @media(max-width:700px){.hero p.tagline{font-size:18px;}}
+
+/* Hero quick paths + packages (Oct 2026) */
+.hero-paths{margin-top:22px;font-size:15px;color:#d6dcec;display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.hero-paths a{color:#fff;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:6px 14px;transition:background .15s,border-color .15s;}
+.hero-paths a:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+#hand-over{scroll-margin-top:90px;}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;align-items:stretch;}
+.pkg-grid .price-card{padding:28px 24px;}
+.pkg-grid .price-card.featured{transform:none;}
+.pkg-grid .price-card.featured:hover{transform:translateY(-4px);}
+.pkg-grid .price{font-size:22px;font-weight:700;}
+.pkg-grid .tier{font-size:18px;line-height:1.3;}
+.pkg-grid .badge{align-self:flex-start;}
+@media(min-width:1100px){.pkg-grid{grid-template-columns:repeat(5,1fr);gap:18px;}.pkg-grid .price-card{padding:26px 20px;}}
+@media(max-width:880px){.hero-home .hero-copy .hero-paths{justify-content:center;}}
+.pkg-grid .pkg-terms{font-size:13px;color:#b9c2db;margin-top:10px;font-style:italic;}
+.pkg-grid .price-card .desc{flex-grow:0;}
+.pkg-grid .price-card .btn{margin-top:auto;}
+.pkg-grid .price-card > .desc:last-of-type, .pkg-grid .pkg-terms{margin-bottom:24px;}
