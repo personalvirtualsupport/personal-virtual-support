@@ -990,5 +990,7 @@ h1,h2,h3,h4,.section-head h2,.hero h1,.hero h1 em,.price-card .tier{font-weight:
 .pkg-alt-item + .pkg-alt-item{padding-right:0;padding-left:32px;border-left:1px solid rgba(26,139,134,.22);}
 .pkg-alt-item .tier{font-size:18px;font-weight:700;line-height:1.3;}
 .pkg-alt-price{font-size:17px;font-weight:600;color:var(--teal);margin:4px 0 10px;}
+.pkg-alt .btn{background:#fff;border-color:rgba(26,139,134,.35);padding:12px 26px;}
+.pkg-alt .btn:hover{border-color:var(--teal);}
 .pkg-alt-item .desc{color:var(--muted);font-size:15px;margin-bottom:18px;flex-grow:1;}
 @media(max-width:640px){.pkg-alt{padding:24px 20px;}.pkg-alt-grid{grid-template-columns:1fr;}.pkg-alt-item{padding-right:0;}.pkg-alt-item + .pkg-alt-item{padding-left:0;border-left:0;border-top:1px solid rgba(26,139,134,.22);margin-top:22px;padding-top:22px;}}
