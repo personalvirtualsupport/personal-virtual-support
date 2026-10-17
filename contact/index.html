@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <script>
 (function(){
   var f=document.getElementById('quick-enquiry'); if(!f) return;
-  var topics={'monthly':'the \u20AA800 monthly invoicing & email management package','invoice-maker':'an invoice maker from my Google Sheet (\u20AA500)','lead-magnet':'a lead magnet setup (\u20AA300)','system':'a system setup (from \u20AA2,000)'};
+  var topics={'monthly':'the \u20AA800 monthly invoicing & email management package','invoice-maker':'an invoice maker from my Google Sheet (\u20AA500)','lead-magnet':'a lead magnet setup (\u20AA300)','system':'a system setup (from \u20AA2,000)','custom':'a custom package','hourly':'hourly support for a short-term job'};
   var m=(location.search.match(/[?&]about=([\w-]+)/)||[])[1];
   if(m && topics[m]){
     var ta=document.getElementById('q-message'); if(ta && !ta.value) ta.value='Hi Soroh Dina, I\u2019d like to ask about '+topics[m]+'.\n\n';
