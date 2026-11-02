@@ -994,3 +994,8 @@ h1,h2,h3,h4,.section-head h2,.hero h1,.hero h1 em,.price-card .tier{font-weight:
 .pkg-alt .btn:hover{border-color:var(--teal);}
 .pkg-alt-item .desc{color:var(--muted);font-size:15px;margin-bottom:18px;flex-grow:1;}
 @media(max-width:640px){.pkg-alt{padding:24px 20px;}.pkg-alt-grid{grid-template-columns:1fr;}.pkg-alt-item{padding-right:0;}.pkg-alt-item + .pkg-alt-item{padding-left:0;border-left:0;border-top:1px solid rgba(26,139,134,.22);margin-top:22px;padding-top:22px;}}
+
+/* ---- Teal paper-plane cursor (desktop only; links/buttons keep the hand, form fields keep the text bar) ---- */
+html,body{cursor:url(/assets/plane-cursor.png) 1 1,auto;cursor:-webkit-image-set(url(/assets/plane-cursor.png) 1x,url(/assets/plane-cursor@2x.png) 2x) 1 1,auto;}
+a[href],button,.btn,[role="button"],summary,select,label[for],input[type="submit"],input[type="button"],input[type="checkbox"],input[type="radio"]{cursor:pointer;}
+input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),textarea{cursor:text;}
