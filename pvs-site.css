@@ -1002,3 +1002,7 @@ input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type
 
 /* Package cards: keep every price on the same line, even when a title wraps to two lines */
 @media(min-width:641px){.pkg-grid .price-card:not(.featured) .tier{min-height:2.6em;}}
+
+/* Packages layout v3 (Nov 2026): 5 cards under the featured one - 3 across, then the two website cards side by side */
+@media(min-width:1001px){.pkg-grid{grid-template-columns:repeat(6,1fr) !important;}.pkg-grid .price-card:not(.featured){grid-column:span 2;}.pkg-grid .price-card:nth-child(5),.pkg-grid .price-card:nth-child(6){grid-column:span 3;}}
+@media(min-width:641px) and (max-width:1000px){.pkg-grid .price-card:nth-child(4){grid-column:1/-1;}}
