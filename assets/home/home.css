@@ -737,3 +737,19 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
   .site-header .nav-links a.nav-faq{font-family:var(--sans);font-size:17px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px;border-color:var(--paper);color:var(--paper);padding:12px 20px}
   .site-header .nav-links a.nav-faq + .nav-reviews{margin-top:10px}
 }
+
+/* "Three kinds of help": clearer text, aligned bottom links (Nov 2026) */
+.svc3-intro,.svc3-col>p{color:#46516A}
+.svc3-col{display:flex;flex-direction:column}
+.svc3-col .ruled{margin-bottom:30px}
+.svc3-col .svc3-anim{margin:0 0 30px}
+.svc3-col .text-link{margin-top:auto;align-self:flex-start}
+@media (max-width:980px){.svc3-col{padding-bottom:30px}}
+/* inbox animation sits beside the headline, keeping the three columns even */
+.svc3-head .svc3-head-anim{grid-column:9/13;grid-row:3;margin:28px 0 0;padding:16px;box-shadow:0 24px 50px -36px rgba(43,54,72,.45)}
+.svc3-head .svc3-head-anim::before{inset:6px}
+.svc3-head .svc3-head-anim figcaption{margin-top:12px;font-size:14px}
+.svc3-head .svc3-head-anim figcaption strong{font-size:18px}
+.svc3-head h2{grid-row:2 / span 2;align-self:start}
+.svc3-head .svc3-intro{grid-row:2;align-self:end}
+@media (max-width:980px){.svc3-head .svc3-head-anim{grid-column:1/-1;grid-row:auto;max-width:460px}.svc3-head h2,.svc3-head .svc3-intro{grid-row:auto}}
