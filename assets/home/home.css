@@ -643,7 +643,7 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .tools-quiet-label{margin:0;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
 .tool-list-quiet{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none}
 .tool-list-quiet li{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-soft);background:none;border:0;padding:0;box-shadow:none}
-.tool-list-quiet img{width:16px;height:16px;filter:grayscale(1);opacity:.7}
+.tool-list-quiet img{width:18px;height:18px;filter:none;opacity:1}
 
 /* Work: lead project + three cards */
 .work3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px);margin-top:clamp(56px,7vw,96px)}
