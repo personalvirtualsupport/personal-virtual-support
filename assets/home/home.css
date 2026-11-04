@@ -718,3 +718,10 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .site-header .nav-links a.nav-reviews.is-active{background:var(--paper);color:var(--navy-950);border-color:var(--paper)}
 .site-header[data-nav="light"] .nav-links a.nav-reviews.is-active{background:var(--navy-900);color:var(--paper);border-color:var(--navy-900)}
 @media (max-width:980px){.nav-indicator{display:none}.has-indicator .site-header .nav-links a.is-active:not(.nav-cta):not(.nav-reviews){text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px;text-decoration-thickness:2px}}
+
+/* Animations back (Nov 2026): inbox sorting inside the Admin column */
+.svc3-col .svc3-anim{grid-column:auto;margin:28px 0 8px;padding:18px;box-shadow:0 24px 50px -36px rgba(43,54,72,.45)}
+.svc3-col .svc3-anim::before{inset:6px}
+.svc3-col .svc3-anim figcaption{margin-top:14px;font-size:14px}
+.svc3-col .svc3-anim figcaption strong{font-size:18px}
+.hero-clear .hero-visual{margin-top:44px}
