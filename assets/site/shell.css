@@ -1,0 +1,151 @@
+/* =====================================================================
+   Personal Virtual Support - site shell only (Nov 2026)
+   For pages that keep their original layout (e.g. /website-design/):
+   new fonts, header, footer and WhatsApp button; page content keeps the
+   look from pvs-site.css. Copy and links unchanged.
+   ===================================================================== */
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/fonts/source-sans-3-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3";font-style:italic;font-weight:200 900;font-display:swap;src:url(/assets/fonts/source-sans-3-latin-wght-italic.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:200 900;font-display:swap;src:url(/assets/fonts/source-sans-3-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Sans 3";font-style:italic;font-weight:200 900;font-display:swap;src:url(/assets/fonts/source-sans-3-latin-ext-wght-italic.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+/* ---------- Fonts (self-hosted, free under the SIL Open Font License) ----------
+   Source Sans 3 for everything (see the type system block at the end) */
+
+/* ---------- Tokens (edit colours here) ----------
+   Colours match the current personalvirtualsupport.com palette */
+:root{
+  --navy-950:#14204A;   /* site navy-deep: footer, phone menu */
+  --navy-900:#1B2A5E;   /* site navy: hero, dark sections, headings */
+  --navy-800:#22336C;   /* a step lighter, to separate stacked dark sections */
+  --teal:#15726E;       /* button teal: the site's darker teal, so white text passes AA */
+  --teal-hover:#0F5A57;
+  --teal-deep:#15726E;  /* site teal-deep: hover, small teal text */
+  --slate:#5D6A82;
+  --mist:#D6DCEC;       /* site tagline colour on navy */
+  --paper:#FAF7F2;      /* site background */
+  --paper-2:#F1EDE4;    /* site soft background */
+  --stone:#E7E1D6;      /* site line colour */
+  --accent:#1A8B86;     /* decorative accent on light */
+  --accent-ink:#15726E; /* accent for small text on light (AA) */
+  --accent-light:#9FE3DF; /* site light-teal labels on navy */
+  --accent-soft:#D5F0EE;
+  --ink:#2B3648;        /* site body text */
+  --ink-soft:#5D6A82;   /* site muted text */
+  --line-light:rgba(43,54,72,.16);
+  --line-dark:rgba(250,247,242,.18);
+
+  --serif:"Source Sans 3",-apple-system,"Segoe UI",Arial,sans-serif;
+  --sans:"Source Sans 3",-apple-system,"Segoe UI",Arial,sans-serif;
+
+  --wrap:1240px;
+  --gutter:clamp(20px,4vw,56px);
+  --section:clamp(88px,12vw,180px);
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+
+
+/* Base: one font everywhere (pvs-site.css still names DM Sans in places) */
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased}
+body *:not(svg):not(text){font-family:var(--sans)!important}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.015em}
+
+/* ---------- Progress bar + skip link ---------- */
+.progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:120;pointer-events:none}
+.progress span{display:block;height:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+.skip-link{position:absolute;left:16px;top:-60px;z-index:200;background:var(--accent-light);color:var(--navy-950);padding:10px 16px;font-weight:600;text-decoration:none;border-radius:0}
+.skip-link:focus{top:12px}
+
+/* ---------- Header (same as homepage) ---------- */
+header.site-header{position:fixed;top:14px;left:0;right:0;z-index:100;padding:0 var(--gutter);background:none;border:0;transition:transform .45s var(--ease)}
+.site-header.is-hidden{transform:translateY(-130%)}
+.site-header .nav-shell{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid var(--line-dark);background:rgba(27,42,94,.62);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);transition:background .4s,border-color .4s,color .4s;color:var(--paper)}
+.site-header[data-nav="light"] .nav-shell{background:rgba(250,247,242,.86);border-color:var(--line-light);color:var(--ink)}
+.site-header .brand{display:block;flex:none}
+.site-header .brand img{height:46px;width:auto;display:block}
+.site-header .brand-dark{display:none!important}
+.site-header[data-nav="light"] .brand-light{display:none!important}
+.site-header[data-nav="light"] .brand-dark{display:block!important}
+.site-header .nav-links{position:static;display:flex;flex-direction:row;align-items:center;gap:clamp(12px,1.6vw,26px);padding:0;background:none;border:0;box-shadow:none;flex-wrap:nowrap}
+.site-header .nav-links a{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;opacity:.86;transition:opacity .25s;white-space:nowrap;color:inherit;padding:0;border-radius:0;background:none}
+.site-header .nav-links a:hover,.site-header .nav-links a[aria-current="page"]{opacity:1}
+.site-header .nav-links a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px;text-decoration-thickness:1px}
+.site-header .nav-links .nav-cta{opacity:1;background:var(--teal);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;margin:0;transition:background .3s}
+.site-header .nav-links .nav-cta:hover{background:var(--teal-hover);transform:none}
+.site-header .menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;position:relative;padding:0}
+.site-header .menu-btn span{position:absolute;left:14px;right:14px;height:1.5px;width:auto;margin:0;border-radius:0;background:currentColor;transition:transform .35s var(--ease),top .35s var(--ease)}
+.site-header .menu-btn span:first-child{top:19px}.site-header .menu-btn span:last-child{top:27px}
+.menu-open .site-header .menu-btn span:first-child{top:23px;transform:rotate(45deg)}
+.menu-open .site-header .menu-btn span:last-child{top:23px;transform:rotate(-45deg)}
+@media (max-width:1100px){.site-header .nav-links{gap:14px}.site-header .nav-links a{font-size:12.5px;letter-spacing:.06em}}
+@media (max-width:980px){
+  .site-header .menu-btn{display:block}
+  .site-header .nav-links{position:fixed;inset:0;z-index:-1;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:100px var(--gutter) 40px;background:var(--navy-950);color:var(--paper);opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;display:flex}
+  .menu-open .site-header .nav-links{opacity:1;visibility:visible}
+  .site-header .nav-links a{font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:400;letter-spacing:0;text-transform:none;opacity:1;line-height:1.25}
+  .site-header .nav-links .nav-cta{font-family:var(--sans);font-size:17px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px;background:var(--teal)!important;color:#fff!important}
+  .menu-open .site-header .nav-shell{background:transparent;border-color:transparent;color:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .menu-open .site-header .brand-light{display:block!important}.menu-open .site-header .brand-dark{display:none!important}
+}
+@media (max-width:640px){
+  header.site-header{top:10px;padding:0 12px}
+  .site-header .nav-shell{padding:6px 6px 6px 16px}
+  .site-header .brand img{height:38px}
+  .site-header .menu-btn{width:44px;height:44px}
+  .site-header .menu-btn span{left:13px;right:13px}
+  .site-header .menu-btn span:first-child{top:18px}.site-header .menu-btn span:last-child{top:25px}
+  .menu-open .site-header .menu-btn span:first-child,.menu-open .site-header .menu-btn span:last-child{top:21px}
+}
+/* pages that open straight onto content (blog posts) need room under the floating header */
+body.no-hero{padding-top:110px}
+
+/* original page hero sits under the floating header */
+.hero{padding-top:170px}
+@media (max-width:640px){.hero{padding-top:130px}}
+
+/* ---------- Footer (same as homepage) ---------- */
+footer.site-footer{background:var(--navy-950);color:rgba(250,247,242,.8);padding:clamp(60px,7vw,96px) 0 30px;font-size:15px}
+.site-footer .wrap{width:100%;max-width:calc(var(--wrap) + var(--gutter)*2);margin:0 auto;padding:0 var(--gutter)}
+.site-footer .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:40px}
+.site-footer .footer-brand img{height:64px;width:auto;margin-bottom:18px;opacity:1}
+.site-footer .footer-brand p{color:var(--mist);margin:0}
+.site-footer .footer-col{display:flex;flex-direction:column;gap:10px}
+.site-footer .footer-col h2{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-light);margin:0 0 6px}
+.site-footer .footer-col a{color:rgba(250,247,242,.8);text-decoration:none;overflow-wrap:anywhere}
+.site-footer .footer-col a:hover{color:var(--paper);text-decoration:underline}
+.site-footer .footer-note{margin-top:50px;padding-top:26px;border-top:1px solid var(--line-dark)}
+.site-footer .footer-note p{margin:0;color:var(--mist);max-width:none}
+.site-footer .footer-note a{color:var(--accent-light)}
+.site-footer .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin:26px auto 0;padding-top:0;border:0;color:var(--mist);font-size:13px}
+.site-footer .footer-bottom a{color:var(--mist);text-decoration:none}
+@media (max-width:980px){.site-footer .footer-grid{grid-template-columns:1fr 1fr}.site-footer .footer-brand{grid-column:1/-1}}
+@media (max-width:640px){.site-footer .footer-grid{grid-template-columns:1fr}}
+
+/* ---------- WhatsApp button (same as homepage) ---------- */
+a.wa-float{position:fixed;right:20px;bottom:20px;z-index:90;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 14px 30px -10px rgba(20,32,74,.55);transition:transform .3s var(--ease)}
+.js a.wa-float{opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .4s var(--ease),transform .4s var(--ease),visibility .4s}
+.js a.wa-float.is-shown{opacity:1;visibility:visible;transform:none}
+@media (max-width:640px){a.wa-float{right:14px;bottom:14px;width:52px;height:52px}}
+
+@media print{.site-header,.wa-float,.progress{display:none}}
+
+/* Testimonials button in the header (Nov 2026) */
+.site-header .nav-links a.nav-reviews{opacity:1;border:1px solid currentColor;padding:11px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.site-header .nav-links a.nav-reviews:hover{background:rgba(250,247,242,.14)}
+.site-header[data-nav="light"] .nav-links a.nav-reviews:hover{background:rgba(27,42,94,.08)}
+@media (max-width:980px){
+  .site-header .nav-links a.nav-reviews{font-family:var(--sans);font-size:17px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px;border-color:var(--paper);color:var(--paper);padding:12px 20px}
+  .site-header .nav-links a.nav-reviews + .nav-cta{margin-top:10px}
+}
+
+@media (min-width:981px) and (max-width:1180px){
+  .site-header .nav-shell{gap:14px;padding-left:16px}
+  .site-header .brand img{height:40px}
+  .site-header .nav-links{gap:11px}
+  .site-header .nav-links a{font-size:12px;letter-spacing:.03em}
+  .site-header .nav-links a.nav-reviews{padding:9px 13px}
+  .site-header .nav-links .nav-cta{padding:10px 14px}
+}
