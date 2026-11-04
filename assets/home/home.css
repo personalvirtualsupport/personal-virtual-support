@@ -710,7 +710,7 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .tools-quiet .tool-list-quiet img{width:20px;height:20px}
 
 /* Homepage nav: indicator slides to the section you're reading */
-.site-header .nav-links{position:relative}
+@media (min-width:981px){.site-header .nav-links{position:relative}}
 .nav-indicator{position:absolute;left:0;bottom:-7px;height:2px;width:0;background:var(--accent-light);border-radius:2px;opacity:0;pointer-events:none;transition:transform .45s var(--ease),width .45s var(--ease),opacity .3s}
 .site-header[data-nav="light"] .nav-indicator{background:var(--accent)}
 .has-indicator .site-header .nav-links a[aria-current="page"]{text-decoration:none}
@@ -725,3 +725,15 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .svc3-col .svc3-anim figcaption{margin-top:14px;font-size:14px}
 .svc3-col .svc3-anim figcaption strong{font-size:18px}
 .hero-clear .hero-visual{margin-top:44px}
+
+/* FAQ button in the header (Nov 2026), styled like Testimonials */
+.site-header .nav-links a.nav-faq{opacity:1;border:1px solid currentColor;padding:11px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.site-header .nav-links a.nav-faq:hover{background:rgba(250,247,242,.14)}
+.site-header[data-nav="light"] .nav-links a.nav-faq:hover{background:rgba(27,42,94,.08)}
+.site-header .nav-links a.nav-faq[aria-current="page"]{background:var(--paper);color:var(--navy-950);border-color:var(--paper)}
+.site-header[data-nav="light"] .nav-links a.nav-faq[aria-current="page"]{background:var(--navy-900);color:var(--paper);border-color:var(--navy-900)}
+@media (min-width:981px) and (max-width:1240px){.site-header .nav-links a.nav-faq{padding:9px 13px}.site-header .nav-links{gap:10px}.site-header .nav-links a{font-size:12px;letter-spacing:.03em}}
+@media (max-width:980px){
+  .site-header .nav-links a.nav-faq{font-family:var(--sans);font-size:17px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px;border-color:var(--paper);color:var(--paper);padding:12px 20px}
+  .site-header .nav-links a.nav-faq + .nav-reviews{margin-top:10px}
+}
