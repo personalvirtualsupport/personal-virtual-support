@@ -28,6 +28,19 @@
     });
   }
 
+  /* Logo: glide back to the top of the current page */
+  var brand = document.querySelector('.site-header .brand');
+  if (brand) {
+    brand.setAttribute('aria-label', 'Personal Virtual Support: back to top');
+    brand.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      if (doc.classList.contains('menu-open') && btn) setMenu(false);
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      if (history.replaceState && location.hash) history.replaceState(null, '', location.pathname + location.search);
+    });
+  }
+
   /* Calendly popup when the widget has loaded; plain link otherwise */
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a.js-calendly');
@@ -50,9 +63,7 @@
       var r = themed[i].getBoundingClientRect();
       if (r.top <= probe && r.bottom > probe) { header.setAttribute('data-nav', themed[i].getAttribute('data-theme')); break; }
     }
-    if (!doc.classList.contains('menu-open')) {
-      header.classList.toggle('is-hidden', y > lastY && y > vh * 0.6);
-    }
+    /* header stays visible on every page (Nov 2026) */
     lastY = y;
     if (wa) wa.classList.toggle('is-shown', y > vh * 0.7);
     var h = document.body.scrollHeight - vh;
