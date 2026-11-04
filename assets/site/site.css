@@ -323,3 +323,9 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
   .site-header .nav-links a.nav-reviews{padding:9px 13px}
   .site-header .nav-links .nav-cta{padding:10px 14px}
 }
+
+/* Left-align the remaining centred blocks (Website Design and similar) */
+body:not(.no-hero) .container.prose{max-width:calc(var(--wrap) + var(--gutter)*2);margin:0 auto}
+body:not(.no-hero) .container.prose > *{max-width:760px}
+body:not(.no-hero) .container > .prose{margin-left:0}
+.grid.work-grid.work-grid-2{max-width:none;margin:0}
