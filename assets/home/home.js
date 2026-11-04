@@ -147,6 +147,50 @@
     } else { vid.setAttribute('controls', ''); }
   }
 
+
+  /* Homepage: nav indicator follows the section on screen */
+  var navMenu = document.getElementById('navMenu');
+  if (navMenu && document.getElementById('services') && document.getElementById('testimonials')) {
+    var pick = function (sel) { return navMenu.querySelector(sel); };
+    var map = [
+      ['hero', pick('a[href="/"]')],
+      ['services', pick('a[href="/services/"]')],
+      ['work', pick('a[href="/portfolio/"]')],
+      ['testimonials', pick('a.nav-reviews')],
+      ['process', pick('a[href="#packages"]')],
+      ['about', pick('a[href="/about/"]')],
+      ['contact', pick('a[href="/contact/"]')]
+    ].map(function (m) { return { el: m[0] === 'hero' ? document.querySelector('.hero') : document.getElementById(m[0]), link: m[1] }; })
+     .filter(function (m) { return m.el && m.link; });
+    var ind = document.createElement('span');
+    ind.className = 'nav-indicator'; ind.setAttribute('aria-hidden', 'true');
+    navMenu.appendChild(ind);
+    doc.classList.add('has-indicator');
+    var current = null;
+    var place = function (link) {
+      map.forEach(function (m) { m.link.classList.toggle('is-active', m.link === link); });
+      if (!link || link.classList.contains('nav-reviews') || window.innerWidth <= 980) { ind.style.opacity = '0'; return; }
+      var nr = navMenu.getBoundingClientRect(), lr = link.getBoundingClientRect();
+      ind.style.width = lr.width + 'px';
+      ind.style.transform = 'translateX(' + (lr.left - nr.left) + 'px)';
+      ind.style.opacity = '1';
+    };
+    var spy = function () {
+      var line = window.innerHeight * 0.35, found = map[0].link;
+      for (var i = 0; i < map.length; i++) {
+        var r = map[i].el.getBoundingClientRect();
+        if (r.top <= line) found = map[i].link;
+      }
+      if (window.innerHeight + window.pageYOffset >= document.body.scrollHeight - 4) found = map[map.length - 1].link;
+      if (found !== current) { current = found; place(found); }
+    };
+    var spyTick = false;
+    window.addEventListener('scroll', function () { if (!spyTick) { spyTick = true; requestAnimationFrame(function () { spy(); spyTick = false; }); } }, { passive: true });
+    window.addEventListener('resize', function () { current = null; spy(); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { current = null; spy(); });
+    spy();
+  }
+
   var yEl = document.getElementById('year');
   if (yEl) yEl.textContent = new Date().getFullYear();
 })();
