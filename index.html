@@ -21,16 +21,16 @@
 <meta name="twitter:title" content="Virtual Assistant &amp; Website Design | Personal Virtual Support">
 <meta name="twitter:description" content="Virtual assistant and tech support for busy business owners: admin, email follow-up, troubleshooting, websites, email marketing and systems. Based in Israel, working worldwide. Book a free call.">
 <meta name="twitter:image" content="https://personalvirtualsupport.com/social-card.png">
+<meta name="theme-color" content="#1B2A5E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="/assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/home/home.css?v=1">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#FAF7F2">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/pvs-site.css?v=31">
-  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://personalvirtualsupport.com/#business","name":"Personal Virtual Support","alternateName":"PVS","url":"https://personalvirtualsupport.com/","logo":{"@type":"ImageObject","url":"https://personalvirtualsupport.com/logo.png","width":1200,"height":572},"image":"https://personalvirtualsupport.com/social-card.png","description":"Personal Virtual Support (PVS) by Soroh Dina Lowe provides virtual assistant and practical tech support for busy business owners: admin and organisation, email and client follow-up, troubleshooting online tools and systems, website design and website updates, email marketing and automations, and systems, forms and spreadsheets.","email":"contact@personalvirtualsupport.com","telephone":"+972-54-848-1728","priceRange":"$$","address":{"@type":"PostalAddress","addressCountry":"IL"},"areaServed":[{"@type":"Country","name":"Israel"},{"@type":"Country","name":"United States"},{"@type":"Country","name":"United Kingdom"},{"@type":"GeoShape","name":"Worldwide (remote)"}],"knowsLanguage":["en","he"],"founder":{"@type":"Person","@id":"https://personalvirtualsupport.com/about/#soroh","name":"Soroh Dina Lowe","jobTitle":"Virtual Assistant & Website Designer"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Admin and organisation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Email and client follow-up"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tech support and troubleshooting"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website design, build and updates"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Email marketing and automations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Systems, forms and spreadsheets"}}]}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://personalvirtualsupport.com/#website","url":"https://personalvirtualsupport.com/","name":"Personal Virtual Support","publisher":{"@id":"https://personalvirtualsupport.com/#business"}}
@@ -39,123 +39,194 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://personalvirtualsupport.com/"}]}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e9e2743bedf948b495c026b8edd51678"}'></script><!-- End Cloudflare Web Analytics --><!-- GoatCounter --><script data-goatcounter="https://pvs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script>(function(){function gc(n){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:n,title:location.pathname,event:true})}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(/calendly\.com/.test(h))gc('click-book-call');else if(/wa\.me/.test(h))gc('click-whatsapp');else if(/^mailto:/.test(h))gc('click-email');else if(/enquiry/.test(h))gc('click-enquiry-link')},true);document.addEventListener('submit',function(e){gc('enquiry-form-sent'+(e.target.id?'-'+e.target.id:''))},true);window.addEventListener('message',function(e){if(e.origin==='https://calendly.com'&&e.data&&e.data.event==='calendly.event_scheduled')gc('calendly-booking-made')})})();</script><!-- End GoatCounter --></head>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header>
-  <div class="nav">
-    <a class="logo" href="/" aria-label="Personal Virtual Support home"><img src="/personal_virtual_support_logo.svg" style="height:105px;width:auto;" alt="Personal Virtual Support"></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" data-nav="dark">
+  <div class="nav-shell">
+    <a class="brand" href="/" aria-label="Personal Virtual Support home">
+      <img class="brand-light" src="/personal_virtual_support_logo_light.svg" alt="Personal Virtual Support" width="1130" height="537">
+      <img class="brand-dark" src="/personal_virtual_support_logo.svg" alt="" aria-hidden="true" width="1130" height="537">
+    </a>
     <nav class="nav-links" id="navMenu" aria-label="Main">
-      <a class="nav-link current" href="/" aria-current="page">Home</a>
-      <a class="nav-link" href="/services/">Services</a>
-      <a class="nav-link" href="/website-design/">Website Design</a>
-      <a class="nav-link" href="/#packages">Prices</a>
-      <a class="nav-link" href="/portfolio/">Portfolio</a>
-      <a class="nav-link" href="/about/">About</a>
-      <a class="nav-link" href="/contact/">Contact</a>
-      <a class="nav-cta" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a call</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/website-design/">Website Design</a>
+      <a href="#packages">Prices</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a class="nav-cta js-calendly" href="https://calendly.com/contact-personalvirtualsupport">Book a call</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
   </div>
 </header>
+
 <main id="main">
-  <section class="hero hero-home">
-    <div class="hero-inner hero-split">
-      <div class="hero-copy">
-      <span class="eyebrow">Personal Virtual Support</span>
-        <h1>Admin and tech off your shoulders. <em>More headspace for your business.</em></h1>
-        <p class="tagline">I&rsquo;m Soroh Dina Lowe. I help busy business owners with admin, websites, email systems and automations, taking care of the details and getting things finished.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="/contact/#enquiry-form">Tell me what you need help with</a>
-          <a class="btn btn-light" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free introductory call</a>
-        </div>
-      </div>
-      <div class="hero-visual" role="img" aria-label="Animation: a cluttered screen of overdue tasks being quickly tidied up and marked as done">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero theme-dark" data-theme="dark" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <p class="eyebrow hero-eyebrow"><span>Personal Virtual Support</span><span class="dot" aria-hidden="true"></span><span>Soroh Dina Lowe</span></p>
+    <h1 id="hero-title" class="hero-title">
+      <span class="line"><span>Less on your plate.</span></span>
+      <span class="line"><span>More time for <em>your business.</em></span></span>
+    </h1>
+
+    <div class="hero-visual" role="img" aria-label="Animation: a cluttered screen of overdue tasks being quickly tidied up and marked as done">
         <div class="ms-screen" aria-hidden="true">
           <div class="ms-bar"><i></i><i></i><i></i><b>Your to-do list</b><span class="ms-ff">&#9654;&#9654; Fast-forward</span><span class="ms-progress"></span></div>
-          <div class="ms-card" style="--mx:18%;--my:30%;--mr:-8deg;--tx:4%;--ty:16%;--d:0s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="ms-label">Inbox</span><span class="ms-pill"><span class="ms-bad">99+</span><span class="ms-good">0 unread</span></span></div>
-          <div class="ms-card" style="--mx:40%;--my:52%;--mr:7deg;--tx:52%;--ty:16%;--d:.12s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span><span class="ms-label">Invoices</span><span class="ms-pill"><span class="ms-bad">Overdue</span><span class="ms-good">Sent</span></span></div>
-          <div class="ms-card" style="--mx:8%;--my:58%;--mr:5deg;--tx:4%;--ty:40%;--d:.24s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span><span class="ms-label">Contact form</span><span class="ms-pill"><span class="ms-bad">Not sending</span><span class="ms-good">Working</span></span></div>
-          <div class="ms-card" style="--mx:46%;--my:22%;--mr:-5deg;--tx:52%;--ty:40%;--d:.36s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="ms-label">Calendar</span><span class="ms-pill"><span class="ms-bad">Clash</span><span class="ms-good">Booked</span></span></div>
-          <div class="ms-card note" style="--mx:30%;--my:68%;--mr:-10deg;--tx:4%;--ty:64%;--d:.48s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></span><span class="ms-label">Website update</span><span class="ms-pill"><span class="ms-bad">To do</span><span class="ms-good">Live</span></span></div>
-          <div class="ms-card note" style="--mx:54%;--my:62%;--mr:9deg;--tx:52%;--ty:64%;--d:.6s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span><span class="ms-label">Client follow-up</span><span class="ms-pill"><span class="ms-bad">Waiting</span><span class="ms-good">Replied</span></span></div>
+          <div class="ms-card" style="--mx:18%;--my:30%;--mr:-8deg;--tx:4%;--ty:16%;--d:0s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="ms-label">Inbox</span><span class="ms-pill"><span class="ms-bad">99+</span><span class="ms-good">0 unread</span></span></div>
+          <div class="ms-card" style="--mx:40%;--my:52%;--mr:7deg;--tx:52%;--ty:16%;--d:.12s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span><span class="ms-label">Invoices</span><span class="ms-pill"><span class="ms-bad">Overdue</span><span class="ms-good">Sent</span></span></div>
+          <div class="ms-card" style="--mx:8%;--my:58%;--mr:5deg;--tx:4%;--ty:40%;--d:.24s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span><span class="ms-label">Contact form</span><span class="ms-pill"><span class="ms-bad">Not sending</span><span class="ms-good">Working</span></span></div>
+          <div class="ms-card" style="--mx:46%;--my:22%;--mr:-5deg;--tx:52%;--ty:40%;--d:.36s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="ms-label">Calendar</span><span class="ms-pill"><span class="ms-bad">Clash</span><span class="ms-good">Booked</span></span></div>
+          <div class="ms-card note" style="--mx:30%;--my:68%;--mr:-10deg;--tx:4%;--ty:64%;--d:.48s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></span><span class="ms-label">Website update</span><span class="ms-pill"><span class="ms-bad">To do</span><span class="ms-good">Live</span></span></div>
+          <div class="ms-card note" style="--mx:54%;--my:62%;--mr:9deg;--tx:52%;--ty:64%;--d:.6s"><span class="ms-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span><span class="ms-label">Client follow-up</span><span class="ms-pill"><span class="ms-bad">Waiting</span><span class="ms-good">Replied</span></span></div>
           <div class="ms-alert" style="top:15%;--d:0s">3 missed messages</div>
           <div class="ms-alert" style="top:27%;--d:.5s">Payment reminder</div>
-          <svg class="ms-cursor" viewBox="0 0 24 24"><path d="M4 2l15 9-7 1.5L8.5 20z" fill="#1A8B86" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <svg class="ms-cursor" viewBox="0 0 24 24"><path d="M4 2l15 9-7 1.5L8.5 20z" fill="currentColor" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
           <div class="ms-done">All sorted <em>&#10003;</em></div>
         </div>
         <div class="ms-base" aria-hidden="true"></div>
       </div>
+
+    <div class="hero-side">
+      <p class="hero-lede">Websites, systems, admin and tech support that help your business run smoothly, without having to figure everything out yourself.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="/contact/">Let&rsquo;s talk <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn-line" href="#work">Explore my work</a>
+      </div>
+      <p class="hero-note">A one-person virtual assistant and tech support business, working with clients in Israel, the US and the UK.</p>
     </div>
-  </section>
-  <section class="split-help">
-    <div class="container">
-      <h2>What do you need help with?</h2>
-      <div class="sh-grid">
-        <div class="sh-card">
-          <h3>Tech &amp; websites</h3>
-          <ul><li>New websites and updates</li><li>Email marketing and signup forms</li><li>Automations and systems</li><li>Anything that&rsquo;s stopped working</li></ul>
-          <a class="btn btn-primary" href="#hand-over" data-need="tech">Get tech help</a>
+  </div>
+  <a class="scroll-cue" href="#services" aria-label="Scroll to services"><span></span></a>
+</section>
+
+<!-- ribbon -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>Website updates</span><i>&#10022;</i><span>Landing pages</span><i>&#10022;</i><span>Email marketing</span><i>&#10022;</i><span>Signup forms</span><i>&#10022;</i><span>Automations</span><i>&#10022;</i><span>Scheduling</span><i>&#10022;</i><span>Client follow-up</span><i>&#10022;</i><span>Invoicing</span><i>&#10022;</i><span>Tech troubleshooting</span><i>&#10022;</i>
+    <span>Website updates</span><i>&#10022;</i><span>Landing pages</span><i>&#10022;</i><span>Email marketing</span><i>&#10022;</i><span>Signup forms</span><i>&#10022;</i><span>Automations</span><i>&#10022;</i><span>Scheduling</span><i>&#10022;</i><span>Client follow-up</span><i>&#10022;</i><span>Invoicing</span><i>&#10022;</i><span>Tech troubleshooting</span><i>&#10022;</i>
+  </div>
+</div>
+
+<!-- ============ 2. SERVICES ============ -->
+<div id="services">
+<section class="services-intro theme-light" data-theme="light" aria-labelledby="services-title">
+  <div class="wrap intro-grid">
+    <p class="eyebrow" data-reveal>How I can help</p>
+    <h2 id="services-title" class="display-lg" data-reveal>One person for the admin <em>and</em> the&nbsp;tech.</h2>
+    <p class="intro-copy" data-reveal>Remote virtual assistant support from Israel, for business owners in Israel, the US and the UK. Hand over the jobs that keep slipping down your list, and I&rsquo;ll take care of the details and get them finished.</p>
+  </div>
+</section>
+
+<!-- I. Websites & Design -->
+<section class="service service-web theme-light" id="websites" data-theme="light" aria-labelledby="svc-web">
+  <div class="wrap service-grid">
+    <div class="service-head">
+      <span class="numeral" aria-hidden="true">01</span>
+      <p class="eyebrow" data-reveal>Websites &amp; Design</p>
+      <h3 id="svc-web" class="display-md" data-reveal>A website that says clearly what you&nbsp;do.</h3>
+    </div>
+    <div class="service-body" data-reveal>
+      <p>New websites built from scratch, redesigns for sites that no longer do you justice, and updates to the WordPress site you already have. Clean, mobile-friendly, and built to guide visitors to get in touch.</p>
+      <ul class="ruled">
+        <li>New websites and redesigns</li>
+        <li>WordPress updates and fixes</li>
+        <li>Landing pages and signup forms</li>
+        <li>Email marketing in MailerLite, Mailchimp or Kit</li>
+      </ul>
+      <div class="link-row">
+        <a class="text-link" href="/website-design/">How website design works</a>
+        <a class="text-link" href="/contact/?about=website-rebuild#enquiry-form">Ask for a quote</a>
+      </div>
+    </div>
+    <figure class="service-visual stack" aria-hidden="true">
+      <img class="stack-back" src="/assets/home/work/bernard-finlay-library-800.webp" alt="" width="800" height="500" loading="lazy" decoding="async" data-parallax="-0.06">
+      <img class="stack-front" src="/assets/home/work/marisa-dating-mentor-800.webp" alt="" width="800" height="469" loading="lazy" decoding="async" data-parallax="0.05">
+    </figure>
+  </div>
+</section>
+
+<!-- II. Systems & Automations -->
+<section class="service service-sys theme-dark" id="solutions" data-theme="dark" aria-labelledby="svc-sys">
+  <div class="wrap">
+    <div class="service-grid sys-top">
+      <div class="service-head">
+        <span class="numeral" aria-hidden="true">02</span>
+        <p class="eyebrow" data-reveal>Systems &amp; Automations</p>
+        <h3 id="svc-sys" class="display-md" data-reveal>Do it once, not <em>every week.</em></h3>
+      </div>
+      <div class="service-body" data-reveal>
+        <p>Simple systems that bring scattered information together and take repetitive steps off your plate. Built around how you already work, with tools you already pay for, and explained so you can run them yourself.</p>
+        <ul class="ruled">
+          <li>Automations with Make.com</li>
+          <li>Google Sheets systems and trackers</li>
+          <li>Bookings, records and invoicing in one place</li>
+          <li>Forms that send where they should</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cases">
+      <article class="case" data-reveal>
+        <p class="case-tag">System &amp; automation</p>
+        <div class="sys-visual" role="img" aria-label="Voice note to WhatsApp confirmation to calendar to spreadsheet to invoice information"><div class="flow" aria-hidden="true"><div class="flow-track"><span class="flow-dot"></span></div><div class="flow-node"><span class="fi" style="--d:0.0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Voice note</div><div class="flow-node"><span class="fi" style="--d:0.8s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span>WhatsApp</div><div class="flow-node"><span class="fi" style="--d:1.6s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Calendar</div><div class="flow-node"><span class="fi" style="--d:2.4s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span>Sheet</div><div class="flow-node"><span class="fi" style="--d:3.2s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span>Invoice</div></div></div>
+        <h4>Bookings and invoicing, brought together</h4>
+        <p>A system connecting WhatsApp, Google Calendar and Google Sheets, allowing a business owner to send booking details by voice note, confirm them through WhatsApp and prepare invoice information for review.</p>
+      </article>
+      <article class="case" data-reveal>
+        <p class="case-tag">Google Sheets system</p>
+        <div class="sys-visual" role="img" aria-label="Scattered records brought together into one central sheet"><div class="merge" aria-hidden="true"><span class="m-sheet" style="--x:6%;--y:8px;--r:-12deg;--d:0s"></span><span class="m-sheet" style="--x:20%;--y:30px;--r:8deg;--d:.1s"></span><span class="m-sheet" style="--x:4%;--y:48px;--r:6deg;--d:.2s"></span><span class="m-sheet" style="--x:26%;--y:2px;--r:-6deg;--d:.3s"></span><span class="m-sheet" style="--x:16%;--y:56px;--r:-14deg;--d:.4s"></span><span class="m-arrow">&rarr;</span><span class="m-final"></span><span class="merge-cap l">Scattered records</span><span class="merge-cap r">One central sheet</span></div></div>
+        <h4>Scattered records, brought into one place</h4>
+        <p>A central Google Sheets system bringing scattered records together, making tracking and payment records easier to manage.</p>
+      </article>
+    </div>
+    <p class="cases-foot" data-reveal>Client names and details are kept private. <a class="text-link" href="/portfolio/">See websites, systems and automations</a></p>
+  </div>
+</section>
+
+<!-- III. Admin & Business Support -->
+<section class="service service-admin theme-cream" id="admin" data-theme="light" aria-labelledby="svc-admin">
+  <div class="wrap service-grid admin-grid">
+    <div class="service-head">
+      <span class="numeral" aria-hidden="true">03</span>
+      <p class="eyebrow" data-reveal>Admin &amp; Business Support</p>
+      <h3 id="svc-admin" class="display-md" data-reveal>The everyday jobs, <em>handled.</em></h3>
+      <div class="service-body" data-reveal>
+        <p>I sort your inbox, keep on top of follow-ups and handle the everyday admin, so the important things don&rsquo;t slip through. And when something technical stops working, I&rsquo;ll work out why and fix it.</p>
+        <ul class="ruled">
+          <li>Inbox sorted and kept under control</li>
+          <li>Invoices sent and payments followed up</li>
+          <li>Scheduling and calendar</li>
+          <li>Chasing clients and suppliers</li>
+          <li>Anything that&rsquo;s stopped working</li>
+        </ul>
+        <div class="link-row">
+          <a class="text-link" href="/services/">See all services in detail</a>
         </div>
-        <div class="sh-card">
-          <h3>Admin &amp; inbox</h3>
-          <ul><li>Inbox sorted and kept under control</li><li>Invoices sent and payments followed up</li><li>Scheduling and calendar</li><li>Chasing clients and suppliers</li></ul>
-          <a class="btn btn-primary" href="#hand-over" data-need="admin">Get admin help</a>
-        </div>
       </div>
     </div>
-  </section>
-  <section class="block hv-video" aria-labelledby="hv-h">
-    <style>
-      .hv-video{padding:64px 0}
-      .hv-video .section-head{margin-bottom:28px}
-      .hv-frame{max-width:960px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 18px 48px rgba(27,42,94,.16);background:#E4E8EF;aspect-ratio:16/9}
-      .hv-frame video{display:block;width:100%;height:100%;object-fit:cover}
-      .hv-cta{text-align:center;margin-top:28px}
-      @media (max-width:640px){.hv-video{padding:44px 0}.hv-frame{border-radius:12px}}
-    </style>
-    <div class="container">
-      <div class="section-head">
-        <h2 id="hv-h">It starts with a quick call</h2>
-        <p>Tell me what&rsquo;s on your plate, and we&rsquo;ll work out together what to take off it.</p>
-      </div>
-      <div class="hv-frame">
-        <video id="hv-vid" poster="/assets/video/how-it-starts-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Short animation: a busy business owner's computer fills with emails, invoices and notifications. She messages Personal Virtual Support, they agree to schedule a quick call, and the screen clears to calm."><source src="/assets/video/how-it-starts.mp4" type="video/mp4"><source src="/assets/video/how-it-starts.webm" type="video/webm"></video>
-      </div>
-      <div class="hv-cta">
-        <a class="btn btn-primary" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a free introductory call</a>
-      </div>
-    </div>
-    <script>
-      (function(){var v=document.getElementById('hv-vid');if(v&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.setAttribute('controls','');}})();
-    </script>
-  </section>
-  <section class="block soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>How I can help</h2>
-        <p>Remote virtual assistant support from Israel, for business owners in Israel, the UK and the US.</p>
-      </div>
-      <div class="inbox-strip">
+    <figure class="inbox-card" data-reveal>
         <div class="ib" role="img" aria-label="Animation: unread emails being sorted into Clients, Invoices and Follow-up folders until the inbox is empty">
           <div class="ib-box" aria-hidden="true"><span class="ib-head"><span class="ib-n1">Inbox &middot; unread</span><span class="ib-n2">Inbox zero &#10003;</span></span></div>
-          <span class="ib-mail" style="--y0:20%;--tx:60%;--ty:5%;--d:.0s"></span><span class="ib-mail" style="--y0:35%;--tx:60%;--ty:37%;--d:.35s"></span><span class="ib-mail" style="--y0:50%;--tx:60%;--ty:69%;--d:.7s"></span><span class="ib-mail" style="--y0:65%;--tx:60%;--ty:5%;--d:1.05s"></span><span class="ib-mail" style="--y0:80%;--tx:60%;--ty:37%;--d:1.4s"></span><span class="ib-folder" style="--fy:5%;--d:0s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Clients<b>&#10003;</b></span><span class="ib-folder" style="--fy:37%;--d:.35s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Invoices<b>&#10003;</b></span><span class="ib-folder" style="--fy:69%;--d:.7s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Follow-up<b>&#10003;</b></span>
+          <span class="ib-mail" style="--y0:20%;--tx:60%;--ty:5%;--d:.0s"></span><span class="ib-mail" style="--y0:35%;--tx:60%;--ty:37%;--d:.35s"></span><span class="ib-mail" style="--y0:50%;--tx:60%;--ty:69%;--d:.7s"></span><span class="ib-mail" style="--y0:65%;--tx:60%;--ty:5%;--d:1.05s"></span><span class="ib-mail" style="--y0:80%;--tx:60%;--ty:37%;--d:1.4s"></span><span class="ib-folder" style="--fy:5%;--d:0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Clients<b>&#10003;</b></span><span class="ib-folder" style="--fy:37%;--d:.35s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Invoices<b>&#10003;</b></span><span class="ib-folder" style="--fy:69%;--d:.7s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg>Follow-up<b>&#10003;</b></span>
         </div>
-        <div>
-          <h3>Your inbox, sorted</h3>
-          <p>Emails filed, follow-ups flagged and replies drafted, so you can find what matters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="block" style="padding-top:0;">
-    <div class="container" style="text-align:center;">
-      <a class="btn btn-outline" href="/services/">See all services in detail</a>
-    </div>
-  </section>
-  <section class="block" id="hand-over" style="padding-top:24px;">
-    <div class="container">
+        <figcaption><strong>Your inbox, sorted</strong><span>Emails filed, follow-ups flagged and replies drafted, so you can find what matters.</span></figcaption>
+      </figure>
+  </div>
+</section>
+</div>
+
+<!-- Hand-over picker -->
+<section class="handover theme-deep" id="hand-over" data-theme="dark" aria-labelledby="pick-h">
+  <div class="wrap">
       <div class="picker">
-        <h2>What would you like to hand over?</h2>
+        <p class="eyebrow">Not sure where to start?</p>
+        <h2 id="pick-h" class="display-md">What would you like to <em>hand over?</em></h2>
         <p>Choose what&rsquo;s on your mind and see how I can help.</p>
         <div class="pick-opts" role="group" aria-label="Choose what you&rsquo;d like help with">
           <button type="button" class="pick-opt" data-need="admin" aria-pressed="true" aria-controls="pick-panel" data-title="Inbox and admin, taken off your list" data-text="I can sort your inbox, keep on top of follow-ups and handle the everyday admin, so the important things don&rsquo;t slip through." data-wa="https://wa.me/972548481728?text=Hi%20Soroh%20Dina%2C%20I%E2%80%99d%20like%20help%20with%20my%20inbox%20and%20admin%E2%80%A6">My inbox and admin</button>
@@ -168,297 +239,259 @@
         <div class="pick-panel" id="pick-panel" aria-live="polite">
           <h3 id="pick-title">Inbox and admin, taken off your list</h3>
           <p id="pick-text">I can sort your inbox, keep on top of follow-ups and handle the everyday admin, so the important things don&rsquo;t slip through.</p>
-          <a class="btn btn-primary" id="pick-wa" href="https://calendly.com/contact-personalvirtualsupport" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-personalvirtualsupport'});return false;">Book a call</a>
+          <a class="btn btn-primary js-calendly" id="pick-wa" href="https://calendly.com/contact-personalvirtualsupport">Book a call</a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="block soft" id="packages">
-    <div class="container">
-      <div class="section-head">
-        <h2>Packages and starting prices</h2>
-        <p>Clear prices for the things people ask me for most. Anything else, tell me what you need and I&rsquo;ll quote a fixed price before we start.</p>
-      </div>
-      <div class="pkg-grid">
-        <div class="price-card featured">
-          <span class="badge">Monthly support</span>
-          <div class="tier">Invoicing &amp; email management</div>
-          <div class="price">&#8362;800 / month</div>
-          <p class="desc">Your invoices prepared and sent each month, payments followed up, and your inbox sorted and kept on top of.</p>
-          <p class="pkg-terms">Subject to terms and conditions agreed before we start.</p>
-          <a class="btn btn-primary" href="/contact/?about=monthly#enquiry-form">Ask about this</a>
-        </div>
-        <div class="price-card">
-          <div class="tier">Invoice maker from your Google Sheet</div>
-          <div class="price">&#8362;500</div>
-          <p class="desc">Turn the sheet you already keep into ready-to-send invoices, without retyping anything.</p>
-          <a class="btn btn-outline" href="/contact/?about=invoice-maker#enquiry-form">Ask about this</a>
-        </div>
-        <div class="price-card">
-          <div class="tier">Lead magnet setup</div>
-          <div class="price">&#8362;300</div>
-          <p class="desc">Your ready-made PDF connected to a signup form, with an automatic delivery email in MailerLite, Mailchimp or Kit.</p>
-          <a class="btn btn-outline" href="/contact/?about=lead-magnet#enquiry-form">Ask about this</a>
-        </div>
-        <div class="price-card">
-          <div class="tier">System setup</div>
-          <div class="price">From &#8362;2,000</div>
-          <p class="desc">Bookings, records and invoicing brought together in one simple system built around how you work.</p>
-          <a class="btn btn-outline" href="/contact/?about=system#enquiry-form">Ask about this</a>
-        </div>
-        <div class="price-card">
-          <div class="tier">Basic website</div>
-          <div class="price">From &#8362;1,000</div>
-          <p class="desc">A clean, mobile-friendly website for a small business or community organisation.</p>
-          <a class="btn btn-outline" href="/website-design/">How it works</a>
-        </div>
-        <div class="price-card">
-          <div class="tier">Website rebuild</div>
-          <div class="price">Quoted for you</div>
-          <p class="desc">Already have a site that needs a fresh start? Every rebuild is different, so tell me what you have and I&rsquo;ll quote a fixed price before we start.</p>
-          <a class="btn btn-outline" href="/contact/?about=website-rebuild#enquiry-form">Ask for a quote</a>
-        </div>
-      </div>
-      <div class="pkg-alt">
-        <h3 class="pkg-alt-title">Need something different?</h3>
-        <div class="pkg-alt-grid">
-          <div class="pkg-alt-item">
-            <div class="tier">Custom package</div>
-            <div class="pkg-alt-price">Quoted for you</div>
-            <p class="desc">Tell me what you need and I’ll put together a package around it. A mix of admin, tech and systems, with a fixed price agreed before we start.</p>
-            <a class="btn btn-outline" href="/contact/?about=custom#enquiry-form">Ask about this</a>
-          </div>
-          <div class="pkg-alt-item">
-            <div class="tier">Hourly support</div>
-            <div class="pkg-alt-price">Rate on request</div>
-            <p class="desc">For one-off or short-term jobs, when you just need a hand for a little while. Get in touch and I’ll tell you the rate before we start.</p>
-            <a class="btn btn-outline" href="/contact/?about=hourly#enquiry-form">Ask about this</a>
-          </div>
-        </div>
-      </div>
-      <div class="pkg-alt" id="tech-help">
-        <div class="pkg-alt-item">
-          <div class="tier">Tech help session</div>
-          <div class="pkg-alt-price">&#8362;175 per session</div>
-          <p class="desc">Stuck with Zoom, email, your website or another tool? Book a one-to-one session over Google Meet and we&rsquo;ll sort it out together.</p>
-          <a class="btn btn-outline" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Q4U4oWqbavJy2W1HFZFduiliPvLPslk9zvY8LiiB6mGcuJiOBpTLyiOaeJm6yHREtkIieqVVv" target="_blank" rel="noopener">Book a tech help session</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="block" id="solutions" style="padding-top:0;">
-    <div class="container">
-      <div class="section-head">
-        <h2>Practical solutions for busy businesses</h2>
-        <p>Alongside websites, I build simple systems that bring scattered information together and take repetitive steps off your plate.</p>
-      </div>
-      <div class="grid grid-2 system-grid">
-        <div class="card system-card">
-          <span class="system-tag">System &amp; automation</span>
-          <div class="sys-visual" role="img" aria-label="Voice note to WhatsApp confirmation to calendar to spreadsheet to invoice information"><div class="flow" aria-hidden="true"><div class="flow-track"><span class="flow-dot"></span></div><div class="flow-node"><span class="fi" style="--d:0.0s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Voice note</div><div class="flow-node"><span class="fi" style="--d:0.8s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span>WhatsApp</div><div class="flow-node"><span class="fi" style="--d:1.6s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Calendar</div><div class="flow-node"><span class="fi" style="--d:2.4s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span>Sheet</div><div class="flow-node"><span class="fi" style="--d:3.2s"><svg viewBox="0 0 24 24" fill="none" stroke="#1A8B86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span>Invoice</div></div></div>
-          <h3>Bookings and invoicing, brought together</h3>
-          <p>A system connecting WhatsApp, Google Calendar and Google Sheets, allowing a business owner to send booking details by voice note, confirm them through WhatsApp and prepare invoice information for review.</p>
-        </div>
-        <div class="card system-card">
-          <span class="system-tag">Google Sheets system</span>
-          <div class="sys-visual" role="img" aria-label="Scattered records brought together into one central sheet"><div class="merge" aria-hidden="true"><span class="m-sheet" style="--x:6%;--y:8px;--r:-12deg;--d:0s"></span><span class="m-sheet" style="--x:20%;--y:30px;--r:8deg;--d:.1s"></span><span class="m-sheet" style="--x:4%;--y:48px;--r:6deg;--d:.2s"></span><span class="m-sheet" style="--x:26%;--y:2px;--r:-6deg;--d:.3s"></span><span class="m-sheet" style="--x:16%;--y:56px;--r:-14deg;--d:.4s"></span><span class="m-arrow">&rarr;</span><span class="m-final"></span><span class="merge-cap l">Scattered records</span><span class="merge-cap r">One central sheet</span></div></div>
-          <h3>Scattered records, brought into one place</h3>
-          <p>A central Google Sheets system bringing scattered records together, making tracking and payment records easier to manage.</p>
-        </div>
-      </div>
-      <div class="center mt-40"><a class="btn btn-outline" href="/portfolio/">See websites, systems and automations</a></div>
-    </div>
-  </section>
-  <section class="tools" aria-labelledby="tools-h">
-    <h2 id="tools-h">Tools I work with</h2>
+  </div>
+</section>
+
+<!-- Tools -->
+<section class="tools theme-light" data-theme="light" aria-labelledby="tools-h">
+  <div class="wrap tools-grid">
+    <h2 id="tools-h" class="eyebrow">Tools I work with</h2>
     <div class="tools-mask">
       <div class="tools-track">
-        <ul class="tools-list"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="22" height="22">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="22" height="22">Claude Cowork</li></ul>
-        <ul class="tools-list" aria-hidden="true"><li><img src="/assets/tools/mailerlite.svg" alt="" width="22" height="22">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="22" height="22">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="22" height="22">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="22" height="22">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="22" height="22">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="22" height="22">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="22" height="22">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="22" height="22">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="22" height="22">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="22" height="22">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="22" height="22">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="22" height="22">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="22" height="22">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="22" height="22">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="22" height="22">Claude Cowork</li></ul>
+        <ul class="tool-list"><li><img src="/assets/tools/mailerlite.svg" alt="" width="28" height="28" loading="lazy">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="28" height="28" loading="lazy">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="28" height="28" loading="lazy">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="28" height="28" loading="lazy">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="28" height="28" loading="lazy">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="28" height="28" loading="lazy">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="28" height="28" loading="lazy">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="28" height="28" loading="lazy">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="28" height="28" loading="lazy">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="28" height="28" loading="lazy">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="28" height="28" loading="lazy">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="28" height="28" loading="lazy">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="28" height="28" loading="lazy">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="28" height="28" loading="lazy">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="28" height="28" loading="lazy">Claude Cowork</li></ul>
+        <ul class="tool-list" aria-hidden="true"><li><img src="/assets/tools/mailerlite.svg" alt="" width="28" height="28" loading="lazy">MailerLite</li><li><img src="/assets/tools/mailchimp.svg" alt="" width="28" height="28" loading="lazy">Mailchimp</li><li><img src="/assets/tools/kit.svg" alt="" width="28" height="28" loading="lazy">Kit</li><li><img src="/assets/tools/make.svg" alt="" width="28" height="28" loading="lazy">Make.com</li><li><img src="/assets/tools/wordpress.svg" alt="" width="28" height="28" loading="lazy">WordPress</li><li><img src="/assets/tools/elementor.svg" alt="" width="28" height="28" loading="lazy">Elementor</li><li><img src="/assets/tools/woocommerce.svg" alt="" width="28" height="28" loading="lazy">WooCommerce</li><li><img src="/assets/tools/lovable.svg" alt="" width="28" height="28" loading="lazy">Lovable</li><li><img src="/assets/tools/google-workspace.svg" alt="" width="28" height="28" loading="lazy">Google Workspace</li><li><img src="/assets/tools/google-sheets.svg" alt="" width="28" height="28" loading="lazy">Google Sheets</li><li><img src="/assets/tools/google-calendar.svg" alt="" width="28" height="28" loading="lazy">Google Calendar</li><li><img src="/assets/tools/zoom.svg" alt="" width="28" height="28" loading="lazy">Zoom</li><li><img src="/assets/tools/whatsapp.svg" alt="" width="28" height="28" loading="lazy">WhatsApp Business</li><li><img src="/assets/tools/chatgpt.svg" alt="" width="28" height="28" loading="lazy">ChatGPT</li><li><img src="/assets/tools/claude-cowork.svg" alt="" width="28" height="28" loading="lazy">Claude Cowork</li></ul>
       </div>
     </div>
-    <p class="tools-custom"><strong>Don't see what you need?</strong> Tell me what you're trying to do. If it's new to me, I'll learn it. I love working out new tools and solutions, with a little help from AI. <a href="/contact/">Let's talk &rarr;</a></p>
-  </section>
-<section class="block soft" id="testimonials">
-  <input type="checkbox" id="tm-1" class="t-toggle">
-  <input type="checkbox" id="tm-2" class="t-toggle">
-  <input type="checkbox" id="tm-3" class="t-toggle">
-  <input type="checkbox" id="tm-4" class="t-toggle">
-  <input type="checkbox" id="tm-5" class="t-toggle">
-  <div class="container">
-    <div class="section-head">
-      <h2>What clients say</h2>
-      <p>From business owners I&rsquo;ve helped with systems, tech and websites.</p>
+    <p class="tools-note">Don&rsquo;t see what you need? Tell me what you&rsquo;re trying to do. If it&rsquo;s new to me, I&rsquo;ll learn it. I love working out new tools and solutions, with a little help from AI. <a class="text-link" href="/contact/">Let&rsquo;s talk</a></p>
+  </div>
+</section>
+
+<!-- ============ 3. PORTFOLIO ============ -->
+<section class="work theme-deep" id="work" data-theme="dark" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="work-head">
+      <p class="eyebrow" data-reveal>Selected work</p>
+      <h2 id="work-title" class="display-lg" data-reveal>Websites I&rsquo;ve designed <em>and built.</em></h2>
+      <p class="work-intro" data-reveal>Every project here was planned and built by me, working directly with the client.</p>
     </div>
-    <div class="t-grid">
-      <figure class="t-card t-featured">
-        <blockquote><p>&ldquo;She helped me set up my MailerLite automations and create a lead magnet that I could share with my LinkedIn community. The entire process was smooth and stress-free, and she was incredibly quick, responsive, and reliable.&rdquo;</p></blockquote>
-        <figcaption><span class="testimonial-name">Temima Neckameyer</span><span class="testimonial-role">LinkedIn Ghostwriter for B2B Founders</span></figcaption>
-        <label class="t-open" for="tm-5">Read full review</label>
-      </figure>
-      <figure class="t-card">
-        <blockquote><p>&ldquo;She built a very intuitive, intelligent automated system that brought everything together into a single Google Sheet.&rdquo;</p></blockquote>
-        <figcaption><span class="testimonial-name">Aryeh Sonnenberg</span><span class="testimonial-role">&nbsp;</span></figcaption>
-        <label class="t-open" for="tm-3">Read full review</label>
-      </figure>
-      <figure class="t-card">
+
+    <article class="project project-lead">
+      <a class="project-media" href="https://michalsimkin.com/academy/" target="_blank" rel="noopener" data-reveal="clip">
+        <picture>
+          <source media="(max-width: 700px)" srcset="assets/home/work/michal-simkin-academy-mobile-800.webp" width="800" height="1047">
+          <img src="/assets/home/work/michal-simkin-academy-1600.webp" srcset="assets/home/work/michal-simkin-academy-800.webp 800w, assets/home/work/michal-simkin-academy-1600.webp 1600w" sizes="(max-width: 1200px) 100vw, 1180px" alt="Before and after: the Michal Simkin Academy course page before the redesign and after" width="1600" height="526" loading="lazy" decoding="async">
+        </picture>
+      </a>
+      <div class="project-text" data-reveal>
+        <p class="project-meta"><span>01</span> Page redesign</p>
+        <h3>Michal Simkin Academy</h3>
+        <p>The course page for a boutique wig salon&rsquo;s academy, rebuilt to look as professional as the training behind it. A confident headline, then the course, the teacher and student results each in their own clear section, with one simple way to join.</p>
+        <a class="text-link" href="https://michalsimkin.com/academy/" target="_blank" rel="noopener">See the new page<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </article>
+
+    <article class="project project-right">
+      <a class="project-media" href="https://www.marisadatingmentor.com" target="_blank" rel="noopener" data-reveal="clip">
+        <img src="/assets/home/work/marisa-dating-mentor-1600.webp" srcset="assets/home/work/marisa-dating-mentor-800.webp 800w, assets/home/work/marisa-dating-mentor-1600.webp 1543w" sizes="(max-width: 900px) 100vw, 60vw" alt="Jewish Dating Mentor website designed and built for Marisa by Soroh Dina" width="1543" height="905" loading="lazy" decoding="async">
+      </a>
+      <div class="project-text" data-reveal>
+        <p class="project-meta"><span>02</span> New website</p>
+        <h3>Jewish Dating Mentor for Marisa</h3>
+        <p>A one-to-one dating mentoring service has to feel personal and private before anyone will pick up the phone. Warm and reassuring, explanation kept short, one clear next step.</p>
+        <a class="text-link" href="https://www.marisadatingmentor.com" target="_blank" rel="noopener">Visit the site<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </article>
+
+    <article class="project project-left">
+      <a class="project-media" href="https://bernardfinlaymemoriallibrary-dotcom.github.io/bernardfinlaymemoriallibrary-dotcom/" target="_blank" rel="noopener" data-reveal="clip">
+        <img src="/assets/home/work/bernard-finlay-library-1600.webp" srcset="assets/home/work/bernard-finlay-library-800.webp 800w, assets/home/work/bernard-finlay-library-1600.webp 1200w" sizes="(max-width: 900px) 100vw, 60vw" alt="Bernard Finlay Memorial Library community library website designed and built by Soroh Dina" width="1200" height="750" loading="lazy" decoding="async">
+      </a>
+      <div class="project-text" data-reveal>
+        <p class="project-meta"><span>03</span> Website &amp; catalog</p>
+        <h3>Bernard Finlay Memorial Library</h3>
+        <p>Over 1,200 books cataloged and made searchable, so members can find, reserve and borrow in seconds instead of asking a volunteer. The hard part was not the design, it was organizing the data behind it.</p>
+        <a class="text-link" href="https://bernardfinlaymemoriallibrary-dotcom.github.io/bernardfinlaymemoriallibrary-dotcom/" target="_blank" rel="noopener">Visit the site<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </article>
+
+    <article class="project project-right">
+      <a class="project-media" href="https://tivharahit.com" target="_blank" rel="noopener" data-reveal="clip">
+        <img src="/assets/home/work/tiv-harahit-1600.webp" srcset="assets/home/work/tiv-harahit-800.webp 800w, assets/home/work/tiv-harahit-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw" alt="Tiv Harahit furniture store website redesigned by Soroh Dina" width="1600" height="739" loading="lazy" decoding="async">
+      </a>
+      <div class="project-text" data-reveal>
+        <p class="project-meta"><span>04</span> WordPress redesign</p>
+        <h3>Tiv Harahit Furniture Store</h3>
+        <p>A redesign for a long-established furniture store in Ramat Beit Shemesh, showing off custom and ready-made pieces properly. Built on their existing WordPress setup, so nothing they relied on had to be thrown away.</p>
+        <a class="text-link" href="https://tivharahit.com" target="_blank" rel="noopener">Visit the site<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </article>
+
+    <div class="work-foot" data-reveal>
+      <a class="btn btn-primary" href="/portfolio/">See the full portfolio <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-line" href="/website-design/">How website design works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. TESTIMONIALS ============ -->
+<section class="voices theme-light" id="testimonials" data-theme="light" aria-labelledby="voices-title">
+  <div class="wrap">
+    <div class="voices-head">
+      <p class="eyebrow" data-reveal>What clients say</p>
+      <h2 id="voices-title" class="display-lg" data-reveal>In their <em>own words.</em></h2>
+      <p data-reveal>From business owners I&rsquo;ve helped with systems, tech and websites.</p>
+    </div>
+
+    <figure class="voice-feature" data-reveal>
+      <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+      <blockquote><p>She helped me set up my MailerLite automations and create a lead magnet that I could share with my LinkedIn community. The entire process was smooth and stress-free, and she was incredibly quick, responsive, and reliable.</p></blockquote>
+      <figcaption><strong>Temima Neckameyer</strong><span>LinkedIn Ghostwriter for B2B Founders</span><button class="read-more" type="button" data-dialog="tm-1">Read full review</button></figcaption>
+    </figure>
+
+    <div class="voice-grid">
+      <figure class="voice" data-reveal>
         <blockquote><p>&ldquo;She helped me solve problems I had been trying to fix for months. Soroh Dina is quick, bright, delightful and extremely capable.&rdquo;</p></blockquote>
-        <figcaption><span class="testimonial-name">Chaya Hinda Allen</span><span class="testimonial-role">Chaya Hinda Allen Coaching Academy</span></figcaption>
-        <label class="t-open" for="tm-4">Read full review</label>
+        <figcaption><strong>Chaya Hinda Allen</strong><span>Chaya Hinda Allen Coaching Academy</span><button class="read-more" type="button" data-dialog="tm-2">Read full review</button></figcaption>
       </figure>
-      <figure class="t-card">
+      <figure class="voice" data-reveal>
+        <blockquote><p>&ldquo;She built a very intuitive, intelligent automated system that brought everything together into a single Google Sheet.&rdquo;</p></blockquote>
+        <figcaption><strong>Aryeh Sonnenberg</strong><span>&nbsp;</span><button class="read-more" type="button" data-dialog="tm-3">Read full review</button></figcaption>
+      </figure>
+      <figure class="voice" data-reveal>
         <blockquote><p>&ldquo;She took the time to understand what I wanted to convey and helped bring it to life in a way that feels authentic and professional.&rdquo;</p></blockquote>
-        <figcaption><span class="testimonial-name">Marisa</span><span class="testimonial-role">Jewish Dating Mentor</span></figcaption>
-        <label class="t-open" for="tm-1">Read full review</label>
+        <figcaption><strong>Marisa</strong><span>Jewish Dating Mentor</span><button class="read-more" type="button" data-dialog="tm-4">Read full review</button></figcaption>
       </figure>
-      <figure class="t-card">
+      <figure class="voice" data-reveal>
         <blockquote><p>&ldquo;You put in real hours and real heart to help me pull this project together &mdash; and made it a genuinely pleasant experience along the way.&rdquo;</p></blockquote>
-        <figcaption><span class="testimonial-name">Ayala Levy</span><span class="testimonial-role">Beauty Made Simple</span></figcaption>
-        <label class="t-open" for="tm-2">Read full review</label>
+        <figcaption><strong>Ayala Levy</strong><span>Beauty Made Simple</span><button class="read-more" type="button" data-dialog="tm-5">Read full review</button></figcaption>
       </figure>
     </div>
   </div>
-  <div class="t-modal t-m1">
-    <label class="t-backdrop" for="tm-1" aria-label="Close"></label>
-    <div class="t-dialog" role="dialog" aria-modal="true">
-      <label class="t-close" for="tm-1" aria-label="Close">&times;</label>
-      <figure class="t-quote">
-        <blockquote>
-          <p>&ldquo;Working with Soroh Dina on my website was a great experience. She was pleasant, efficient, talented, and incredibly easy to work with. Throughout the process she was straightforward, honest, and always willing to help and offer support in everything that was needed.</p>
-          <p>I am so grateful that Soroh Dina was the one who guided me through creating my website. She took the time to understand what I wanted to convey and helped bring it to life in a way that feels authentic and professional. I am truly happy with both the look of the website and the message it expresses.</p>
-          <p>I highly recommend her to anyone looking for someone skilled, reliable, and a pleasure to work with.&rdquo;</p>
-        </blockquote>
-        <figcaption><span class="testimonial-name">Marisa</span><span class="testimonial-role">Jewish Dating Mentor</span></figcaption>
-      </figure>
+
+  <dialog class="review" id="tm-1" aria-labelledby="tm-1-name">
+    <button class="review-close" type="button" aria-label="Close review">&times;</button>
+    <blockquote><p>&ldquo;Working with Soroh Dina was such a great experience! She helped me set up my MailerLite automations and create a lead magnet that I could share with my LinkedIn community. The entire process was smooth and stress-free, and she was incredibly quick, responsive, and reliable.</p><p>Whenever I had a question or needed something, she was always there and got back to me right away. She understood what I needed and made sure everything was done exactly as I wanted.</p><p>I really appreciated how efficient and easy she was to work with, and I would absolutely recommend her to anyone looking for help with their email marketing and automations!&rdquo;</p></blockquote>
+    <p class="review-by"><strong id="tm-1-name">Temima Neckameyer</strong> LinkedIn Ghostwriter for B2B Founders</p>
+  </dialog>
+  <dialog class="review" id="tm-2" aria-labelledby="tm-2-name">
+    <button class="review-close" type="button" aria-label="Close review">&times;</button>
+    <blockquote><p>&ldquo;Soroh Dina is a pleasure to work with. She is incredibly accommodating and even met with me at relatively short notice during her family vacation!</p><p>I&rsquo;ve been using Zoom for over 15 years, but certain technical areas were beyond me. Two professionals whom I highly trust recommended Soroh Dina.</p><p>She helped me solve problems I had been trying to fix for months. I had spent an hour on the phone with a bot and many more hours trying unsuccessfully to sort them out myself.</p><p>Soroh Dina is quick, bright, delightful and extremely capable. Baruch Hashem I found her!&rdquo;</p></blockquote>
+    <p class="review-by"><strong id="tm-2-name">Chaya Hinda Allen</strong> Chaya Hinda Allen Coaching Academy</p>
+  </dialog>
+  <dialog class="review" id="tm-3" aria-labelledby="tm-3-name">
+    <button class="review-close" type="button" aria-label="Close review">&times;</button>
+    <blockquote><p>&ldquo;A Gemach I work with was managing its operations across multiple Excel sheets, which involved a lot of repetitive manual work and inevitably led to mistakes.</p><p>Mrs. Lowe took the time to understand exactly what we needed and built a very intuitive, intelligent automated system that brought everything together into a single Google Sheet. She was thoughtful and thorough from beginning to end, working through all the details and changes with us and not stopping until we were 100% satisfied with the result.</p><p>Just as importantly, she provided excellent documentation, allowing us to manage and use the system independently without needing to rely on her for ongoing assistance.</p><p>The new system has made our work much simpler and more reliable, and we can now expand the Gemach with confidence that important details won&rsquo;t fall through the cracks.</p><p>I highly recommend Mrs. Lowe to anyone looking to streamline a complicated process or automate a system that has become too dependent on manual work.&rdquo;</p></blockquote>
+    <p class="review-by"><strong id="tm-3-name">Aryeh Sonnenberg</strong></p>
+  </dialog>
+  <dialog class="review" id="tm-4" aria-labelledby="tm-4-name">
+    <button class="review-close" type="button" aria-label="Close review">&times;</button>
+    <blockquote><p>&ldquo;Working with Soroh Dina on my website was a great experience. She was pleasant, efficient, talented, and incredibly easy to work with. Throughout the process she was straightforward, honest, and always willing to help and offer support in everything that was needed.</p><p>I am so grateful that Soroh Dina was the one who guided me through creating my website. She took the time to understand what I wanted to convey and helped bring it to life in a way that feels authentic and professional. I am truly happy with both the look of the website and the message it expresses.</p><p>I highly recommend her to anyone looking for someone skilled, reliable, and a pleasure to work with.&rdquo;</p></blockquote>
+    <p class="review-by"><strong id="tm-4-name">Marisa</strong> Jewish Dating Mentor</p>
+  </dialog>
+  <dialog class="review" id="tm-5" aria-labelledby="tm-5-name">
+    <button class="review-close" type="button" aria-label="Close review">&times;</button>
+    <blockquote><p>&ldquo;Soroh Dina, thank you for showing up again and again &mdash; through the roadblocks, the travel, the curveballs &mdash; and never letting any of it slow down what we were building.</p><p>You put in real hours and real heart to help me pull this project together, and you made it a genuinely pleasant experience to work with you along the way. So grateful to have you on this journey.&rdquo;</p></blockquote>
+    <p class="review-by"><strong id="tm-5-name">Ayala Levy</strong> Beauty Made Simple</p>
+  </dialog>
+</section>
+
+<!-- ============ 5. ABOUT SOROH DINA ============ -->
+<section class="about theme-dark" id="about" data-theme="dark" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-lead">
+      <p class="eyebrow" data-reveal>Who you&rsquo;ll be working with</p>
+      <h2 id="about-title" class="display-lg" data-reveal>Hi, I&rsquo;m <em>Soroh&nbsp;Dina.</em></h2>
+      <p class="about-statement" data-reveal>Personal Virtual Support is just me. No agency, no team, no handoffs. When you get in touch, you&rsquo;re talking to the person who will do the work.</p>
     </div>
-  </div>
-  <div class="t-modal t-m2">
-    <label class="t-backdrop" for="tm-2" aria-label="Close"></label>
-    <div class="t-dialog" role="dialog" aria-modal="true">
-      <label class="t-close" for="tm-2" aria-label="Close">&times;</label>
-      <figure class="t-quote">
-        <blockquote>
-          <p>&ldquo;Soroh Dina, thank you for showing up again and again &mdash; through the roadblocks, the travel, the curveballs &mdash; and never letting any of it slow down what we were building.</p>
-          <p>You put in real hours and real heart to help me pull this project together, and you made it a genuinely pleasant experience to work with you along the way. So grateful to have you on this journey.&rdquo;</p>
-        </blockquote>
-        <figcaption><span class="testimonial-name">Ayala Levy</span><span class="testimonial-role">Beauty Made Simple</span></figcaption>
-      </figure>
+    <div class="about-body" data-reveal>
+      <p>Think of me as a dedicated right hand: one person who learns how your business works and takes the admin, tech and website jobs off your list.</p>
+      <p>I have many years of hands-on experience in admin support and operations, client communication, documents and files, spreadsheets and trackers, research and scheduling. I&rsquo;m at my best taking messy information, scattered tasks or half-finished systems and turning them into something clear that works.</p>
+      <p>I use AI as a practical tool to learn quickly, draft and organize, while the judgment and the care stay mine.</p>
+      <p class="signoff">&mdash; Soroh Dina Lowe</p>
     </div>
-  </div>
-  <div class="t-modal t-m3">
-    <label class="t-backdrop" for="tm-3" aria-label="Close"></label>
-    <div class="t-dialog" role="dialog" aria-modal="true">
-      <label class="t-close" for="tm-3" aria-label="Close">&times;</label>
-      <figure class="t-quote">
-        <blockquote>
-          <p>&ldquo;A Gemach I work with was managing its operations across multiple Excel sheets, which involved a lot of repetitive manual work and inevitably led to mistakes.</p>
-          <p>Mrs. Lowe took the time to understand exactly what we needed and built a very intuitive, intelligent automated system that brought everything together into a single Google Sheet. She was thoughtful and thorough from beginning to end, working through all the details and changes with us and not stopping until we were 100% satisfied with the result.</p>
-          <p>Just as importantly, she provided excellent documentation, allowing us to manage and use the system independently without needing to rely on her for ongoing assistance.</p>
-          <p>The new system has made our work much simpler and more reliable, and we can now expand the Gemach with confidence that important details won&rsquo;t fall through the cracks.</p>
-          <p>I highly recommend Mrs. Lowe to anyone looking to streamline a complicated process or automate a system that has become too dependent on manual work.&rdquo;</p>
-        </blockquote>
-        <figcaption><span class="testimonial-name">Aryeh Sonnenberg</span></figcaption>
-      </figure>
-    </div>
-  </div>
-  <div class="t-modal t-m4">
-    <label class="t-backdrop" for="tm-4" aria-label="Close"></label>
-    <div class="t-dialog" role="dialog" aria-modal="true">
-      <label class="t-close" for="tm-4" aria-label="Close">×</label>
-      <figure class="t-quote">
-        <blockquote>
-          <p>“Soroh Dina is a pleasure to work with. She is incredibly accommodating and even met with me at relatively short notice during her family vacation!</p>
-          <p>I’ve been using Zoom for over 15 years, but certain technical areas were beyond me. Two professionals whom I highly trust recommended Soroh Dina.</p>
-          <p>She helped me solve problems I had been trying to fix for months. I had spent an hour on the phone with a bot and many more hours trying unsuccessfully to sort them out myself.</p>
-          <p>Soroh Dina is quick, bright, delightful and extremely capable. Baruch Hashem I found her!”</p>
-        </blockquote>
-        <figcaption><span class="testimonial-name">Chaya Hinda Allen</span><span class="testimonial-role">Chaya Hinda Allen Coaching Academy</span></figcaption>
-      </figure>
-    </div>
-  </div>
-  <div class="t-modal t-m5">
-    <label class="t-backdrop" for="tm-5" aria-label="Close"></label>
-    <div class="t-dialog" role="dialog" aria-modal="true">
-      <label class="t-close" for="tm-5" aria-label="Close">&times;</label>
-      <figure class="t-quote">
-        <blockquote>
-          <p>&ldquo;Working with Soroh Dina was such a great experience! She helped me set up my MailerLite automations and create a lead magnet that I could share with my LinkedIn community. The entire process was smooth and stress-free, and she was incredibly quick, responsive, and reliable.</p>
-          <p>Whenever I had a question or needed something, she was always there and got back to me right away. She understood what I needed and made sure everything was done exactly as I wanted.</p>
-          <p>I really appreciated how efficient and easy she was to work with, and I would absolutely recommend her to anyone looking for help with their email marketing and automations!&rdquo;</p>
-        </blockquote>
-        <figcaption><span class="testimonial-name">Temima Neckameyer</span><span class="testimonial-role">LinkedIn Ghostwriter for B2B Founders</span></figcaption>
-      </figure>
-    </div>
+    <ol class="reasons">
+      <li data-reveal><span class="reason-n">01</span><h3>You deal with the same person every time</h3><p>No re-explaining your business to someone new. I get to know how you work and what matters to you.</p></li>
+      <li data-reveal><span class="reason-n">02</span><h3>Admin and tech experience in one place</h3><p>From inboxes and spreadsheets to email marketing and websites, you don&rsquo;t need a different person for each job.</p></li>
+      <li data-reveal><span class="reason-n">03</span><h3>Calm, careful and discreet</h3><p>Your information is handled with care, and when you hand something over, it gets done.</p></li>
+    </ol>
+    <a class="text-link about-more" href="/about/" data-reveal>More about me</a>
   </div>
 </section>
-  <section class="block" id="work">
-  <div class="container">
-    <div class="section-head">
-      <h2>Websites I&rsquo;ve designed and built</h2>
-      <p>Clean, mobile-friendly websites for small businesses and community organisations.</p>
+
+<!-- ============ 6. PROCESS + WAYS TO WORK ============ -->
+<section class="process theme-cream" id="process" data-theme="light" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="process-head">
+      <p class="eyebrow" data-reveal>How it works</p>
+      <h2 id="process-title" class="display-lg" data-reveal>It starts with a <em>quick call.</em></h2>
+      <p class="process-lede" data-reveal>Tell me what&rsquo;s on your plate, and we&rsquo;ll work out together what to take off it.</p>
     </div>
-    <div class="grid grid-4 work-grid">
-      <a class="work-card" href="https://www.marisadatingmentor.com" target="_blank" rel="noopener">
-        <div class="work-shot"><img decoding="async" width="1200" height="750" src="/assets/marisa-dating-mentor.webp" alt="Jewish Dating Mentor website designed and built for Marisa by Soroh Dina" loading="lazy"></div>
-        <div class="work-meta"><h3>Jewish Dating Mentor for Marisa</h3><p>A warm, trustworthy website for a one-to-one dating mentoring service, built to feel personal and private while guiding visitors to get in touch.</p><span class="work-link">Visit the site →</span></div>
-      </a>
-      <a class="work-card" href="https://bernardfinlaymemoriallibrary-dotcom.github.io/bernardfinlaymemoriallibrary-dotcom/" target="_blank" rel="noopener">
-        <div class="work-shot"><img decoding="async" width="1200" height="750" src="/assets/bernard-finlay-library.webp" alt="Bernard Finlay Memorial Library community library website designed and built by Soroh Dina" loading="lazy"></div>
-        <div class="work-meta"><h3>Bernard Finlay Memorial Library</h3><p>A searchable catalogue website for a community library, with over 1,200 books organised so members can find, reserve and borrow in seconds.</p><span class="work-link">Visit the site →</span></div>
-      </a>
-      <a class="work-card" href="https://tivharahit.com" target="_blank" rel="noopener">
-        <div class="work-shot"><img decoding="async" width="1200" height="750" src="/assets/tiv-harahit.webp" alt="Tiv Harahit furniture store website redesigned by Soroh Dina" loading="lazy"></div>
-        <div class="work-meta"><h3>Tiv Harahit Furniture Store</h3><p>A redesigned website for a long-established furniture store in Ramat Beit Shemesh, showcasing their custom and ready-made pieces.</p><span class="work-link">Visit the site →</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-  <section class="block" style="padding-top:0;">
-    <div class="container" style="text-align:center;">
-      <a class="btn btn-outline" href="/portfolio/">See the full portfolio</a>
-      &nbsp;
-      <a class="btn btn-outline" href="/website-design/">How website design works</a>
-    </div>
-  </section>
-  <section class="block soft">
-    <div class="container">
-      <div class="split">
-        <div>
-          <h2>Why work with me</h2>
-          <p>You work directly with one reliable person who learns how your business works, follows things through and takes responsibility for getting the details right.</p>
-          <a class="btn btn-outline mt-40" href="/about/">More about me</a>
+    <figure class="film" data-reveal>
+      <div class="film-frame">
+        <video id="hv-vid" poster="assets/video/how-it-starts-poster.jpg" muted loop playsinline preload="none" title="Short animation: a busy business owner's computer fills with emails, invoices and notifications. She messages Personal Virtual Support, they agree to schedule a quick call, and the screen clears to calm."><source src="/assets/video/how-it-starts.mp4" type="video/mp4"><source src="/assets/video/how-it-starts.webm" type="video/webm"></video>
+      </div>
+      <figcaption><a class="btn btn-navy js-calendly" href="https://calendly.com/contact-personalvirtualsupport">Book a free introductory call <span class="arrow" aria-hidden="true">&rarr;</span></a></figcaption>
+    </figure>
+    <ol class="steps">
+      <li class="step" data-reveal><span class="step-n">01</span><h3>Tell me what&rsquo;s on your plate</h3><p>Book a free introductory call, or send a message through the contact form. We&rsquo;ll work out together what to take off your list.</p></li>
+      <li class="step" data-reveal><span class="step-n">02</span><h3>Agree the plan and the price</h3><p>For a project, I&rsquo;ll quote a fixed price before we start. For ongoing or hourly help, you&rsquo;ll know the rate up front.</p></li>
+      <li class="step" data-reveal><span class="step-n">03</span><h3>I get it done</h3><p>Remotely, around how you already work. I follow things through, keep you in the loop and take responsibility for getting the details right.</p></li>
+      <li class="step" data-reveal><span class="step-n">04</span><h3>Keep me on hand</h3><p>Hand over a set of tasks, book regular check-ins, or call on me when something comes up. Whatever fits your business.</p></li>
+    </ol>
+
+    <div class="ways" id="packages">
+      <h3 class="ways-title" data-reveal>Ways to work together</h3>
+      <div class="ways-list">
+        <div class="way" data-reveal>
+          <p class="way-name">Introductory call</p>
+          <p class="way-desc">A short call to talk through what you need and whether I&rsquo;m the right fit.</p>
+          <p class="way-price">Free</p>
+          <a class="text-link js-calendly" href="https://calendly.com/contact-personalvirtualsupport">Book a call</a>
         </div>
-        <div class="panel">
-          <ul>
-            <li>Personal, consistent support</li>
-            <li>Practical admin and technical experience</li>
-            <li>Calm, reliable follow-through</li>
-            <li>Thoughtful use of AI and automation where it genuinely saves time</li>
-          </ul>
+        <div class="way" id="tech-help" data-reveal>
+          <p class="way-name">Tech help session</p>
+          <p class="way-desc">Stuck with Zoom, email, your website or another tool? Book a one-to-one session over Google Meet and we&rsquo;ll sort it out together.</p>
+          <p class="way-price">&#8362;175 per session</p>
+          <a class="text-link" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Q4U4oWqbavJy2W1HFZFduiliPvLPslk9zvY8LiiB6mGcuJiOBpTLyiOaeJm6yHREtkIieqVVv" target="_blank" rel="noopener">Book a session<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+        <div class="way" data-reveal>
+          <p class="way-name">Projects</p>
+          <p class="way-desc">Websites, rebuilds, systems, lead magnets and setups. Tell me what you have and what you need.</p>
+          <p class="way-price">Fixed price, quoted for you</p>
+          <a class="text-link" href="/contact/?about=custom#enquiry-form">Ask for a quote</a>
+        </div>
+        <div class="way" data-reveal>
+          <p class="way-name">Ongoing support</p>
+          <p class="way-desc">Monthly or hourly help with admin, inbox, invoicing and tech, for as long as it&rsquo;s useful.</p>
+          <p class="way-price">Rate on request</p>
+          <a class="text-link" href="/contact/?about=monthly#enquiry-form">Ask about this</a>
         </div>
       </div>
     </div>
-  </section>
-<section class="kesher-note" style="padding:28px 20px 0;text-align:center;">
-    <p style="margin:0 auto;max-width:760px;font-size:16px;"><strong>Something new I&rsquo;m exploring:</strong> Kesher, a possible networking website for frum professionals. Not built yet, still at the research stage. <a href="/kesher/" style="color:#1A8B86;text-decoration:underline;font-weight:600;white-space:nowrap;">Learn more about Kesher &rarr;</a></p>
-  </section>
-<section class="block">
-    <div class="container">
-      <div class="cta-strip">
-        <h2>Ready to get something off your list?</h2>
-        <p>Tell me what is taking up your time or what has become stuck.</p>
-        <a class="btn btn-light" href="/contact/">Get in touch</a>
+  </div>
+</section>
+
+<!-- ============ 7. CONTACT ============ -->
+<section class="finale theme-dark" id="contact" data-theme="dark" aria-labelledby="finale-title">
+  <div class="finale-ring" aria-hidden="true"></div>
+  <div class="wrap finale-grid">
+    <p class="eyebrow" data-reveal>Let&rsquo;s talk</p>
+    <h2 id="finale-title" class="display-xl" data-reveal>Ready to get something <em>off your list?</em></h2>
+    <div class="finale-side" data-reveal>
+      <p>Tell me what is taking up your time or what has become stuck. I&rsquo;ll get back to you personally.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="/contact/">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn-line js-calendly" href="https://calendly.com/contact-personalvirtualsupport">Book a free introductory call</a>
       </div>
+      <dl class="direct">
+        <div><dt>Email</dt><dd><a href="mailto:contact@personalvirtualsupport.com">contact@personalvirtualsupport.com</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/972548481728" target="_blank" rel="noopener">+972 54-848-1728</a></dd></div>
+      </dl>
     </div>
-  </section>
+  </div>
+</section>
+
 </main>
-<footer>
-  <div class="footer-inner">
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" data-theme="dark">
+  <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="logo" href="/" aria-label="Personal Virtual Support home">
-        <img src="/personal_virtual_support_logo.svg" alt="Personal Virtual Support" width="270" height="128">
-      </a>
-      <p class="footer-blurb">Virtual assistant and website design, run by Soroh Dina Lowe from Israel.</p>
+      <a href="/" aria-label="Personal Virtual Support home"><img src="/personal_virtual_support_logo_light.svg" alt="Personal Virtual Support" width="1130" height="537" loading="lazy"></a>
+      <p>Virtual assistant and website design, run by Soroh Dina Lowe from Israel.</p>
     </div>
     <nav class="footer-col" aria-label="Footer: pages">
       <h2>Explore</h2>
@@ -480,78 +513,20 @@
       <a href="https://wa.me/972548481728" target="_blank" rel="noopener">+972 54-848-1728</a>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="wrap footer-note">
+    <p><strong>Something new I&rsquo;m exploring:</strong> Kesher, a possible networking website for frum professionals. Not built yet, still at the research stage. <a href="/kesher/">Learn more about Kesher</a></p>
+  </div>
+  <div class="wrap footer-bottom">
     <span>&copy; <span id="year">2026</span> Personal Virtual Support. All rights reserved.</span>
-    <span><a href="https://personalvirtualsupport.com/">personalvirtualsupport.com</a></span>
+    <a href="/">personalvirtualsupport.com</a>
   </div>
 </footer>
-<script>
-function toggleMenu(){
-  var m=document.getElementById('navMenu');
-  var b=document.getElementById('menuBtn');
-  if(m){m.classList.toggle('open');
-    if(b){b.setAttribute('aria-expanded', m.classList.contains('open') ? 'true' : 'false');}}
-}
-function goTo(id){
-  var t=document.getElementById(id);
-  if(!t){return;}
-  var h=document.querySelector('header');
-  var off=h ? h.offsetHeight + 12 : 0;
-  window.scrollTo({top:t.getBoundingClientRect().top + window.pageYOffset - off, behavior:'smooth'});
-}
-document.addEventListener('DOMContentLoaded',function(){
-  var mb=document.getElementById('menuBtn');
-  if(mb){mb.addEventListener('click',toggleMenu);}
-  var y=document.getElementById('year');
-  if(y){y.textContent=new Date().getFullYear();}
-});
-</script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-(function(){
-  var opts=document.querySelectorAll('.pick-opt'); if(!opts.length) return;
-  var panel=document.getElementById('pick-panel'),t=document.getElementById('pick-title'),x=document.getElementById('pick-text'),w=document.getElementById('pick-wa');
-  Array.prototype.forEach.call(opts,function(b){
-    b.addEventListener('click',function(){
-      Array.prototype.forEach.call(opts,function(o){o.setAttribute('aria-pressed','false');});
-      b.setAttribute('aria-pressed','true');
-      t.innerHTML=b.getAttribute('data-title'); x.innerHTML=b.getAttribute('data-text');
-      panel.classList.remove('fade'); void panel.offsetWidth; panel.classList.add('fade');
-    });
-  });
-  function fromHash(){
-    var m=(location.hash||'').match(/^#need-(\w+)$/); if(!m) return;
-    var b=document.querySelector('.pick-opt[data-need="'+m[1]+'"]'); if(!b) return;
-    b.click(); document.getElementById('hand-over').scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  window.addEventListener('hashchange',fromHash); fromHash();
-  Array.prototype.forEach.call(document.querySelectorAll('.split-help a[data-need]'),function(a){
-    a.addEventListener('click',function(){var b=document.querySelector('.pick-opt[data-need="'+a.getAttribute('data-need')+'"]'); if(b) b.click();});
-  });
-})();
-</script>
-<div class="wa-widget">
-  <input type="checkbox" id="wa-toggle" class="wa-toggle">
-  <div class="wa-card" role="dialog" aria-label="Message Soroh Dina Lowe on WhatsApp">
-    <div class="wa-card-head">
-      <span class="wa-head-icon"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.39 4 15.03c0 2.35.68 4.55 1.87 6.41L4 29l7.75-1.82a12.1 12.1 0 0 0 4.29.79h.01c6.64 0 12.03-5.39 12.03-12.03C28.08 8.39 22.68 3 16.04 3Zm0 21.86h-.01c-1.3 0-2.58-.35-3.7-1.01l-.26-.16-4.6 1.08 1.1-4.48-.17-.28a9.83 9.83 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg></span>
-      <span class="wa-head-text">
-        <strong>Start a conversation</strong>
-        <span>Hi! Click below to speak to Soroh Dina on <b>WhatsApp</b></span>
-      </span>
-      <label for="wa-toggle" class="wa-close" aria-label="Close">&times;</label>
-    </div>
-    <div class="wa-card-body">
-      <a class="wa-person" href="https://wa.me/972548481728?text=Hi%20Soroh%20Dina%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20to%20ask%20about%20support." target="_blank" rel="noopener">
-        <span class="wa-person-av"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.39 4 15.03c0 2.35.68 4.55 1.87 6.41L4 29l7.75-1.82a12.1 12.1 0 0 0 4.29.79h.01c6.64 0 12.03-5.39 12.03-12.03C28.08 8.39 22.68 3 16.04 3Zm0 21.86h-.01c-1.3 0-2.58-.35-3.7-1.01l-.26-.16-4.6 1.08 1.1-4.48-.17-.28a9.83 9.83 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg></span>
-        <span class="wa-person-name">Soroh Dina Lowe</span>
-        <span class="wa-person-go"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.39 4 15.03c0 2.35.68 4.55 1.87 6.41L4 29l7.75-1.82a12.1 12.1 0 0 0 4.29.79h.01c6.64 0 12.03-5.39 12.03-12.03C28.08 8.39 22.68 3 16.04 3Zm0 21.86h-.01c-1.3 0-2.58-.35-3.7-1.01l-.26-.16-4.6 1.08 1.1-4.48-.17-.28a9.83 9.83 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg></span>
-      </a>
-    </div>
-  </div>
-  <label for="wa-toggle" class="wa-float" role="button" tabindex="0"
-     aria-label="Message Soroh Dina Lowe on WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.39 4 15.03c0 2.35.68 4.55 1.87 6.41L4 29l7.75-1.82a12.1 12.1 0 0 0 4.29.79h.01c6.64 0 12.03-5.39 12.03-12.03C28.08 8.39 22.68 3 16.04 3Zm0 21.86h-.01c-1.3 0-2.58-.35-3.7-1.01l-.26-.16-4.6 1.08 1.1-4.48-.17-.28a9.83 9.83 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg></label>
-</div>
 
+<a class="wa-float" href="https://wa.me/972548481728?text=Hi%20Soroh%20Dina%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20to%20ask%20about%20support." target="_blank" rel="noopener" aria-label="Message Soroh Dina Lowe on WhatsApp (opens in a new tab)">
+  <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.39 4 15.03c0 2.35.68 4.55 1.87 6.41L4 29l7.75-1.82a12.1 12.1 0 0 0 4.29.79h.01c6.64 0 12.03-5.39 12.03-12.03C28.08 8.39 22.68 3 16.04 3Zm0 21.86h-.01c-1.3 0-2.58-.35-3.7-1.01l-.26-.16-4.6 1.08 1.1-4.48-.17-.28a9.83 9.83 0 0 1-1.51-5.24c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg>
+</a>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script src="/assets/home/home.js?v=1" defer></script>
 </body>
 </html>
