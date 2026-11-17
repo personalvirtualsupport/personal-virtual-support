@@ -763,7 +763,8 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .site-header .nav-links a.nav-faq[aria-current="page"],.site-header .nav-links a.nav-reviews.is-active,
 .site-header[data-nav="light"] .nav-links a.nav-faq[aria-current="page"],.site-header[data-nav="light"] .nav-links a.nav-reviews.is-active{background:none;color:inherit;border:0}
 @media (max-width:980px){
-  .site-header .nav-links a.nav-faq,.site-header .nav-links a.nav-reviews{border:0;padding:12px 0;margin-top:0}
+  .site-header .nav-links a.nav-faq,.site-header .nav-links a.nav-reviews{border:0;padding:0;margin-top:0;font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:600;letter-spacing:0;text-transform:none;line-height:1.25}
+  .site-header .nav-links a.nav-faq + a.nav-reviews{margin-top:0}
 }
 /* Hero note: larger, lighter tint so it reads on the navy */
 .hero-note{font-size:16px;color:#EEF2FA}
