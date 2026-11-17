@@ -754,3 +754,21 @@ h1,h2,h3,h4,.display-xl,.display-lg,.display-md,.hero-title,.case h4,.project-te
 .svc3-head h2{grid-row:2 / span 2;align-self:start}
 .svc3-head .svc3-intro{grid-row:2;align-self:end}
 @media (max-width:980px){.svc3-head .svc3-head-anim{grid-column:1/-1;grid-row:auto;max-width:460px}.svc3-head h2,.svc3-head .svc3-intro{grid-row:auto}}
+
+/* ---- Roast fixes (17 Nov 2026) ---- */
+/* Nav: only "Book a free call" stays a filled button; FAQ and Testimonials become plain text links */
+.site-header .nav-links a.nav-faq,.site-header .nav-links a.nav-reviews{border:0;border-radius:0;padding:0;font-weight:inherit;background:none}
+.site-header .nav-links a.nav-faq:hover,.site-header .nav-links a.nav-reviews:hover,
+.site-header[data-nav="light"] .nav-links a.nav-faq:hover,.site-header[data-nav="light"] .nav-links a.nav-reviews:hover{background:none}
+.site-header .nav-links a.nav-faq[aria-current="page"],.site-header .nav-links a.nav-reviews.is-active,
+.site-header[data-nav="light"] .nav-links a.nav-faq[aria-current="page"],.site-header[data-nav="light"] .nav-links a.nav-reviews.is-active{background:none;color:inherit;border:0}
+@media (max-width:980px){
+  .site-header .nav-links a.nav-faq,.site-header .nav-links a.nav-reviews{border:0;padding:0;margin-top:0;font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-weight:600;letter-spacing:0;text-transform:none;line-height:1.25}
+  .site-header .nav-links a.nav-faq + a.nav-reviews{margin-top:0}
+}
+/* Hero note: larger, lighter tint so it reads on the navy */
+.hero-note{font-size:16px;color:#EEF2FA}
+/* Inbox mock: friendly empty state instead of a blank panel */
+.ib-empty{position:absolute;left:0;top:0;width:52%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:600;color:#0F5E5A;opacity:0;animation:ib-n2 9s infinite;pointer-events:none}
+.ib-empty svg{width:34px;height:34px;padding:7px;border-radius:50%;background:#DCF1EF}
+@media (prefers-reduced-motion:reduce){.ib-empty{animation:none!important;opacity:1}}
