@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You're in! | AI Made Practical</title><meta name="robots" content="noindex">
+<style>
+:root{--navy:#152149;--teal:#008F8B;--turq:#2CCDC1;--mint:#E8F6F3;--cream:#FAF9F6;--ink:#334155}
+*{box-sizing:border-box}body{margin:0;font-family:'Open Sans',Arial,sans-serif;background:#d9dee7;color:var(--ink)}
+/* SIGNUP */
+.logo{background:#fff;border-radius:6px;padding:4px 10px;font-weight:800;color:var(--navy);font-size:13px;line-height:1.1}
+.logo small{display:block;font-size:8px;color:var(--teal);letter-spacing:1px}
+.eb{font-size:12px;letter-spacing:3px;font-weight:700;color:var(--turq)}
+@keyframes bl{50%{opacity:0}}
+@media (max-width:600px){
+/* THANKS */
+.th{background:var(--mint);padding:44px 22px 50px;text-align:center;position:relative;overflow:hidden}
+.th canvas{position:absolute;inset:0;pointer-events:none;width:100%;height:100%}
+.tin{max-width:620px;margin:0 auto;position:relative}
+.ck{width:110px;height:110px;margin:0 auto 6px}
+.ck circle{stroke:var(--navy);stroke-width:5;fill:var(--turq);stroke-dasharray:300;stroke-dashoffset:300;animation:dr .7s .1s forwards}
+.ck path{stroke:var(--navy);stroke-width:8;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:dr .5s .7s forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.th h1{font-size:84px;line-height:1;margin:6px 0 12px;color:var(--navy);letter-spacing:-2px}
+.th h1 span{color:var(--teal)}
+.th .sub{font-size:21px;color:var(--navy);font-weight:600;margin:0 0 26px}
+.warn{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:12px 16px;font-weight:700;color:var(--navy);margin:0 auto 24px;max-width:520px}
+.tip{background:var(--navy);color:#fff;border-radius:18px;padding:26px;text-align:left;margin-bottom:22px}
+.tip .eb{margin-bottom:10px}
+.pr{background:rgba(255,255,255,.1);border-left:5px solid var(--turq);border-radius:8px;padding:14px 16px;font-size:18px;line-height:1.45;margin:0 0 16px}
+.cp{background:var(--turq);color:var(--navy);border:0;border-radius:12px;padding:16px 26px;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 var(--teal);transition:.15s}
+.cp:active{transform:translateY(3px);box-shadow:0 2px 0 var(--teal)}
+.end{font-weight:700;color:var(--navy);font-size:18px}
+@media (max-width:600px){.th h1{font-size:54px}.th .sub{font-size:18px}.tip{padding:20px}.pr{font-size:16px}}
+
+.th{min-height:100vh;padding-top:56px}
+</style></head><body style="background:#E8F6F3">
+<div class="th"><canvas id="cf"></canvas><div class="tin">
+ <svg class="ck" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="48"/><path d="M33 57l15 15 30-33"/></svg>
+ <h1>You're <span>in!</span></h1>
+ <p class="sub">You've just opened the door to a whole new way of using AI.</p>
+ <div class="warn">One quick step: check your inbox and confirm your email.</div>
+ <div class="tip"><div class="eb">WHY WAIT? TRY YOUR FIRST AI TIP NOW.</div>
+  <p class="pr" id="pr">Ask me five questions about my daily routine, then suggest three ways AI could make my life easier.</p>
+  <button class="cp" id="cp" type="button">Copy &amp; Try It</button></div>
+ <p class="end">Then keep an eye on your inbox. Your welcome email follows right after you confirm!</p>
+</div></div>
+<script>
+document.getElementById('cp').onclick=function(){var t=document.getElementById('pr').textContent,b=this;function ok(){b.textContent='Copied! Now paste it into your AI';setTimeout(function(){b.innerHTML='Copy &amp; Try It'},2500)}
+ function fb(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(a);ok()}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else fb()};
+(function(){var c=document.getElementById('cf'),x=c.getContext('2d');c.width=c.offsetWidth;c.height=c.offsetHeight;var cols=['#152149','#008F8B','#2CCDC1','#FFFFFF'],ps=[];
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ for(var i=0;i<70;i++)ps.push({x:c.width/2,y:c.height*.22,vx:(Math.random()-.5)*11,vy:-Math.random()*9-2,s:5+Math.random()*6,c:cols[i%4],r:Math.random()*6});
+ var f=0;(function a(){x.clearRect(0,0,c.width,c.height);ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.28;p.r+=.2;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore()});if(++f<110)requestAnimationFrame(a);else x.clearRect(0,0,c.width,c.height)})()})();
+</script></body></html>
